@@ -15,3 +15,12 @@ Updates
 - Eventually, I might make the data structure adoptapedicmap a map<string,set<int>> instead of a map<string,vector<int>> to reduce runtime.
 - I'd like to figure out a way to store how each group is rated in terms of popularity and community involvement as well as a script that copies the output text documents and edits the journal entries where the dictionary entries are displayed.
 - I also want to find out how to manage multiple output streams more effectively since having to reloop through the map for each category results in a runtime of O(klog(n)) with k being the number of categories and n as the number of groups stored. At the moment, the runtime is around 17 seconds.
+
+7/1/2014
+- add_groups.cpp fully debugged and works
+- runtime for my current file size is maybe 2 seconds, so the runtime shouldn't be something to worry about. However for learning purposes, I still want to address issues.
+- Add a ranking system in the future for groups.
+- Get atoi to work
+- Write a function that clears the text in INPUT.txt
+- A prompt for whether groups are to be added or a group deleted.
+- Future script that copies the text in the .txt files and replaces the journal entries
