@@ -4,19 +4,6 @@
 // and then modifying output text documents as opposed to reading in lines from
 // an excel spreadsheet
 
-// PROCESS
-// 0) convert the category text documents into category vectors
-// 1) convert input text document to a vector of strings ((use a prompter for this))
-//		create spotlight variable
-// 2) cycle through input vector
-//		- if string.length > 1 (as in, not a category)
-//			set string.length as spotlight
-//		- elif string.length == 1 (as in, category)
-//			append spotlight to the designated category vector
-//		continue advancing until you reach the end of the input vector
-// 3) cycle through each category vector to modify the text documents ((set this to one function
-//	  and simply have it read in the names of the categories
-
 // DIRECTORY OF TEXT DOCUMENTS
  // Raw text documents for inputs
   // INPUT.txt - file that stores the information for new groups to be added
@@ -40,7 +27,8 @@
 #include <algorithm>
 #include <string>
 #include <map>
-
+#include <utility>
+#include <cctype>
 
 typedef std::map<std::string, std::vector<int> > adoptapedicmap;
 // within the program, the overarching one will be referred to as a_map
@@ -48,10 +36,38 @@ typedef std::map<std::string, std::vector<int> >::iterator a_map_it;
 // iterator to be used when cycling through the map to determine 
 
 // --------------------------------------------------------------------------------
+// I wasn't able to get atoi to work for the moment, so I made my own quick
+// helper function instead.
+int convert_str_to_int(const std::string &input) {
+	if (input == "0") {
+		return 0;
+	} else if (input == "1") {
+		return 1;
+	} else if (input == "2") {
+		return 2;
+	} else if (input == "3") {
+		return 3;
+	} else if (input == "4") {
+		return 4;
+	} else if (input == "5") {
+		return 5;
+	} else if (input == "6") {
+		return 6;
+	} else if (input == "7") {
+		return 7;
+	} else if (input == "8") {
+		return 8;
+	} else if (input == "9") {
+		return 9;
+	}
+}
+
+// --------------------------------------------------------------------------------
 // Add a new group to the adoptapedic map
 void add(adoptapedicmap &a_map, const std::string &spotlight) {
-	int zero_vector[] = {0}; // this will be used as the default vector setting when groups are installed
-	a_map.insert(std::pair<std::string,std::vector<int> >(spotlight, zero_vector));
+	std::vector<int> zero_vector;
+	zero_vector.push_back(0); // this will be used as the default vector setting when groups are installed
+	a_map.insert(std::make_pair<std::string,std::vector<int> >(spotlight, zero_vector));
 }
 
 // --------------------------------------------------------------------------------
@@ -63,16 +79,18 @@ void read_words(adoptapedicmap &a_map, std::ifstream & text_str) {
 	while (text_str >> x) {
 		if (x.size() > 1) { // if the input is a word
 			spotlight = x; // set spotlight as x
+			for (int i=0; spotlight[i]; i++) spotlight[i] = tolower(spotlight[i]); // make the word all lower case
 			// don't insert it only if the word already exists, but have it remain as spotlight in the event that categories are to be edited
 			if (a_map.find(spotlight)!=a_map.end()) { //duplicate not found
 				add(a_map, spotlight); // add it to a_map 
 			} // don't do anything if duplicate is found
-		}
-		else if (x.size() == 1) { // if the input is a number rather than a word
+		} else if (x.size() == 1) { // if the input is a number rather than a word
 			// convert to int and append this number to the spotlight's vector if it doesn't exist prior
-			num = std::atoi(x);
+			// int num = std::atoi(x);
+			int num = convert_str_to_int(x);
 			if (std::find((a_map.find(spotlight)->second).begin(), (a_map.find(spotlight)->second).end(), num)==(a_map.find(spotlight)->second).end()) { // duplicate not found
-				(a_map.find(spotlight)->second).push_back(num); // add on the new directory that the group will be a part of
+				a_map[spotlight].push_back(num);
+				//((a_map.find(spotlight))->second).push_back(num); // add on the new directory that the group will be a part of
 			}
 		}
 	}
@@ -80,14 +98,14 @@ void read_words(adoptapedicmap &a_map, std::ifstream & text_str) {
 
 // --------------------------------------------------------------------------------
 void write_to_ALL(adoptapedicmap &a_map, std::ofstream &out_str) {
-	for (a_map_it iterator = a_map.begin(); iterator != a_map.edn(); iterator++) {
+	for (a_map_it iterator = a_map.begin(); iterator != a_map.end(); iterator++) {
 		// iterator->first = group name
 		out_str << iterator->first;
 		// iterator->second = vector of ints for categories
-		for (unsigned int i=1; i<(iterator->second).size(); i++) { // print out categories except for the 0
-			out_str << " " << (iterator->second[i]);
+		for (unsigned int i=0; i<(iterator->second).size(); i++) { // print out categories except for the 0
+			out_str << " " << (iterator->second)[i];
 		}
-		out_str << std::endl;
+		out_str << "\n";
 	}
 }
 
@@ -108,10 +126,11 @@ void write_to_txt(adoptapedicmap &a_map, std::ofstream &out_str, const int & cat
 // ================================================================================
 int main(int argc, char* argv[]) {
 	adoptapedicmap a_map;
-	
+		
 	// ALL.txt - file that stores the information of all the groups already stored
 	// open ALL.txt and read into a_map
 	std::ifstream all_str("ALL.txt");
+	
 	if (!all_str.good()) {
 		std::cerr << "Could not open ALL.txt to read\n";
 		return 1;
@@ -181,4 +200,6 @@ int main(int argc, char* argv[]) {
 	if (agencies_txt_str.is_open()) {
 		write_to_txt(a_map, agencies_txt_str, 7);
 	} else { return 0; }
+	
+	std::cout << "Finished adding groups." << std::endl;
 }
