@@ -24,3 +24,7 @@ Updates
 - Write a function that clears the text in INPUT.txt
 - A prompt for whether groups are to be added or a group deleted.
 - Future script that copies the text in the .txt files and replaces the journal entries
+
+7/2/2014
+- This is a super quick update since all I did was add notify_groups.cpp and changed the .txt filenames so that they're organized within the Adoptapedia folder on my desktop.
+- All previous plans for the program remain the same.
