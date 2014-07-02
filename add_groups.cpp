@@ -1,22 +1,20 @@
-
-
-// the basis for the program will be reading in line input from .txt documents
+// The basis for the program will be reading in line input from .txt documents
 // and then modifying output text documents as opposed to reading in lines from
 // an excel spreadsheet
 
 // DIRECTORY OF TEXT DOCUMENTS
  // Raw text documents for inputs
-  // INPUT.txt - file that stores the information for new groups to be added
-  // ALL.txt - file that stores the information of all the groups already stored
+  // 00-INPUT.txt - file that stores the information for new groups to be added
+  // 00-ALL.txt - file that stores the information of all the groups already stored
  // Formatted text documents for outputs
-  // all_text.txt - All Adoptable Groups
-  // all_accepted.txt - Groups that accept all types of adopts
-  // species.txt - Species Specific Groups
-  // fandom.txt - Fandom Specific Groups
-  // payment.txt - Payment Specific Groups
-  // quality.txt - Groups with a Quality Filter
-  // bases.txt - Groups for Adoptable Bases
-  // agencies.txt - Adoption Agencies
+  // 0-all_text.txt - All Adoptable Groups
+  // 1-all_accepted.txt - Groups that accept all types of adopts
+  // 2-species.txt - Species Specific Groups
+  // 3-fandom.txt - Fandom Specific Groups
+  // 4-payment.txt - Payment Specific Groups
+  // 5-quality.txt - Groups with a Quality Filter
+  // 6-bases.txt - Groups for Adoptable Bases
+  // 7-agencies.txt - Adoption Agencies
 
 #include <iostream>
 #include <fstream>
@@ -114,6 +112,18 @@ void write_to_ALL(adoptapedicmap &a_map, std::ofstream &out_str) {
 // to be inefficient because it only lets me take in one output stream at a time and have to cycle
 // through the map each time, resulting in O(klog(n)) runtime with k as the number of output documents
 // and n as the number of elements stored in the map. At the moment, that runtime is at 22.
+void write_to_complete_list(adoptapedicmap &a_map, std::ofstream &out_str) {
+	for (a_map_it iterator = a_map.begin(); iterator != a_map.end(); iterator++) {
+		// just go ahead and print everything
+		out_str << ":icon" << iterator->first << ": :dev" << iterator->first << ":" << std::endl;
+	}
+}
+
+// --------------------------------------------------------------------------------
+// rewrite journal files to their respective .txt documents. Note, I personally find this method
+// to be inefficient because it only lets me take in one output stream at a time and have to cycle
+// through the map each time, resulting in O(klog(n)) runtime with k as the number of output documents
+// and n as the number of elements stored in the map. At the moment, that runtime is at 22.
 void write_to_txt(adoptapedicmap &a_map, std::ofstream &out_str, const int & category_num) {
 	for (a_map_it iterator = a_map.begin(); iterator != a_map.end(); iterator++) {
 		// check if the examined group belongs in the specified category
@@ -129,74 +139,74 @@ int main(int argc, char* argv[]) {
 		
 	// ALL.txt - file that stores the information of all the groups already stored
 	// open ALL.txt and read into a_map
-	std::ifstream all_str("ALL.txt");
+	std::ifstream all_str("00-ALL.txt");
 	
 	if (!all_str.good()) {
-		std::cerr << "Could not open ALL.txt to read\n";
+		std::cerr << "Could not open 00-ALL.txt to read\n";
 		return 1;
 	}
 	read_words(a_map, all_str);
 	
 	// INPUT.txt - file that stores the information for new groups to be added
 	// open INPUT.txt and read it into a_map as well, thereby combinging the two
-	std::ifstream input_str("INPUT.txt");
+	std::ifstream input_str("00-INPUT.txt");
 	if (!input_str.good()) {
-		std::cerr << "Could not open INPUT.txt to read\n";
+		std::cerr << "Could not open 00-INPUT.txt to read\n";
 		return 1;
 	}
 	read_words(a_map, input_str);
 	
 	// open up ALL.txt so that it can be rewritten with the combined text
-	std::ofstream all_str_rewrite("ALL.txt");
+	std::ofstream all_str_rewrite("00-ALL.txt");
 	if (all_str_rewrite.is_open()) {
 		write_to_ALL(a_map, all_str_rewrite);
 	} else { return 0; }
 	
 	// rewrite each separate .txt category file.
 	// all_text.txt - All Adoptable Groups
-	std::ofstream all_txt_str("all_text.txt");
+	std::ofstream all_txt_str("0-all_text.txt");
 	if (all_txt_str.is_open()) {
-		write_to_txt(a_map, all_txt_str, 0);
+		write_to_complete_list(a_map, all_txt_str);
 	} else { return 0; }
 	
 	// all_accepted.txt - Groups that accept all types of adopts
-	std::ofstream all_accepted_str("all_accepted.txt");
+	std::ofstream all_accepted_str("1-all_accepted.txt");
 	if (all_accepted_str.is_open()) {
 		write_to_txt(a_map, all_accepted_str, 1);
 	} else { return 0; }
 	
 	// species.txt - Species Specific Groups
-	std::ofstream species_txt_str("species.txt");
+	std::ofstream species_txt_str("2-species.txt");
 	if (species_txt_str.is_open()) {
 		write_to_txt(a_map, species_txt_str, 2);
 	} else { return 0; }
 	
 	// fandom.txt - Fandom Specific Groups
-	std::ofstream fandom_txt_str("fandom.txt");
+	std::ofstream fandom_txt_str("3-fandom.txt");
 	if (fandom_txt_str.is_open()) {
 		write_to_txt(a_map, fandom_txt_str, 3);
 	} else { return 0; }
 	
 	// payment.txt - Payment Specific Groups
-	std::ofstream payment_txt_str("payment.txt");
+	std::ofstream payment_txt_str("4-payment.txt");
 	if (payment_txt_str.is_open()) {
 		write_to_txt(a_map, payment_txt_str, 4);
 	} else { return 0; }
 	
 	// quality.txt - Groups with a Quality Filter
-	std::ofstream quality_txt_str("quality.txt");
+	std::ofstream quality_txt_str("5-quality.txt");
 	if (quality_txt_str.is_open()) {
 		write_to_txt(a_map, quality_txt_str, 5);
 	} else { return 0; }
 	
 	// bases.txt - Groups for Adoptable Bases
-	std::ofstream bases_txt_str("bases.txt");
+	std::ofstream bases_txt_str("6-bases.txt");
 	if (bases_txt_str.is_open()) {
 		write_to_txt(a_map, bases_txt_str, 6);
 	} else { return 0; }
 	
 	// agencies.txt - Adoption Agencies
-	std::ofstream agencies_txt_str("agencies.txt");
+	std::ofstream agencies_txt_str("7-agencies.txt");
 	if (agencies_txt_str.is_open()) {
 		write_to_txt(a_map, agencies_txt_str, 7);
 	} else { return 0; }
