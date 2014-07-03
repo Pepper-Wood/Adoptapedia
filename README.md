@@ -28,3 +28,7 @@ Updates
 7/2/2014
 - This is a super quick update since all I did was add notify_groups.cpp and changed the .txt filenames so that they're organized within the Adoptapedia folder on my desktop.
 - All previous plans for the program remain the same.
+
+7/3/2014
+- Rewrote add_groups.cpp to perform the same task as notify_groups.cpp.
+- In the process, there was a bug with the code that prevented it from recognizing new groups not in the directory. That has been addressed and fixed.
