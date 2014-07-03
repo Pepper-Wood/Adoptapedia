@@ -20,6 +20,8 @@
 add_groups.cpp				// adds groups within the INPUT.txt file to the group directory and formats .txt files accordingly
 add_groups.exe
 add_groups.exe.stackdump
-notify_new_groups.cpp		// transforms the groups listed in INPUT.txt to NOTIFICATIONS.txt to make sending notifications easier
-notify_new_groups.exe
+                      // These two files used to be in the directory, but I have since merged the code to add_groups
+//notify_new_groups.cpp		// transforms the groups listed in INPUT.txt to NOTIFICATIONS.txt to make sending notifications easier
+//notify_new_groups.exe
+
 README.cpp					// the file that you are currently reading ;)
