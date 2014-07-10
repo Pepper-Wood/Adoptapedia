@@ -20,7 +20,7 @@ Updates
 - add_groups.cpp fully debugged and works
 - runtime for my current file size is maybe 2 seconds, so the runtime shouldn't be something to worry about. However for learning purposes, I still want to address issues.
 - Add a ranking system in the future for groups.
-- Get atoi to work
+- In the future, get atoi to work
 - Write a function that clears the text in INPUT.txt
 - A prompt for whether groups are to be added or a group deleted.
 - Future script that copies the text in the .txt files and replaces the journal entries
@@ -32,3 +32,11 @@ Updates
 7/3/2014
 - Rewrote add_groups.cpp to perform the same task as notify_groups.cpp.
 - In the process, there was a bug with the code that prevented it from recognizing new groups not in the directory. That has been addressed and fixed.
+
+7/10/2014
+- Renamed add_groups.cpp to main.cpp after beginning to write a separate helper function called update_wc.cpp but realizing that most of the code would be reused.
+- Added function that makes updating the number of watchers groups have a bit easier for me.
+- Figured out how to implement atoi correctly! :D
+- Modififed read_words so that I can just write in the number of watchers a group has into 00-INPUT.txt and have it determine the category that it belongs in
+- Maybe eventually I can have the input document read in sub words as categories rather than numbers so it'll be easier for me to remember them off the top of my head.
+- I'm going to see if there is a way for me to access the number of watchers a person has through a function rather than by hand so that I could just run a for loop to update the watch count rather than open each individual webpage, write the watch count, and then do the same for the rest of them. As in, get a function to cycle through a list of urls and return the number of watchers to a separate .txt file and then read that in as another list to use in main.cpp.
