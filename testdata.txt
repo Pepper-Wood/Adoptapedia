@@ -1,9 +1,9 @@
-adoptableagencies
+#adoptableagencies
 canvas-cuties
 cygnia
 derptastical
 elementiiae
-fantasticnexus
+#fantasticnexus
 ior-adoptables
 kirikitties
 lnnovation

@@ -40,11 +40,20 @@ def return_num_of_watchers(group_name): #{
 	parser.feed(page_source)
 	
 	watch_integer = ''
-	for i in range(0, len(watch_list)):
+	if len(watch_list) == 0: #{
+		print group_name + "  DOES NOT EXIST"
+		return 1
+	#}
+	for i in range(0, len(watch_list)): #{
 		watch_list[i] = watch_list[i].replace(' Watchers','')
 		if hasNumbers(watch_list[i]):
 			watch_integer = watch_list[i]
+	#}
 
+	if watch_integer == '': #{
+		print group_name + "  DOES NOT EXIST"
+		return 1
+	#}
 	if ',' in watch_integer:
 		final_int = int(watch_integer.replace(',',''))
 	else:

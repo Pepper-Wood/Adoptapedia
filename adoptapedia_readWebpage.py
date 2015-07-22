@@ -19,19 +19,32 @@ def return_num_of_watchers(group_name): #{
 	page_source = response.read()
 	
 	watch_list = []
+	account_check_array = []
 	
 	# ---------------------------------------------------
 	# create a subclass and override the handler methods
 	class MyHTMLParser(HTMLParser):
 		def handle_data(self, data):
-			if data.find("atchers") != -1:
-				watch_list.append(data)
+			account_check_array.append(data)
+			#if data.find("atchers") != -1:
+			#	watch_list.append(data)
 	# ---------------------------------------------------
 	# instantiate the parser and fed it some HTML
 	parser = MyHTMLParser()
 	parser.feed(page_source)
 	
+	#determine if an entry is an account or a group
+	if page_source.find('content="&nbsp;">') != -1:
+		# watcher count will be set at 0
+		return 0
+	
 	watch_integer = ''
+	for i in range(0, len(account_check_array)):
+		if "atchers" in account_check_array[i]:
+			watch_list.append(account_check_array[i-1])
+			watch_list.append(account_check_array[i])
+			#print "..." + account_check_array[i] + "..."
+			#print "..." + account_check_array[i-1] + "..."
 	for i in range(0, len(watch_list)):
 		watch_list[i] = watch_list[i].replace(' Watchers','')
 		if hasNumbers(watch_list[i]):
@@ -48,6 +61,8 @@ def return_num_of_watchers(group_name): #{
 text_file = open("testdata.txt", "r")
 groupNames = text_file.readlines()
 
+print "-----elementiiae    " + str(return_num_of_watchers("elementiiae"))
 for i in range(0, len(groupNames)):
-	groupNames[i] = groupNames[i].translate(None, whitespace)
-	print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
+	if groupNames[i][0] != "#":
+		groupNames[i] = groupNames[i].translate(None, whitespace)
+		print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
