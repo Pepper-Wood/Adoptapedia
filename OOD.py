@@ -62,6 +62,12 @@ class GROUP: #{
 	def addCategory(self, value):
 		self.categories.append(value)
 	
+	def delCategory(self, value):
+		self.categories.remove(value)
+
+	def sortCategory(self):
+		self.categories.sort()
+	
 	def updateWC(self):
 		self.watcher_count = return_num_of_watchers(self.name)
 	
@@ -91,10 +97,11 @@ for i in range(0, len(groupNames)):
 	exec_string = 'x = GROUP(' + groupNames[i] + ')'
 	exec exec_string
 	#x = GROUP(groupNames[i],i,empty_array)
-	#x.updateWC()
+	x.updateWC()
 	object_array.append(x)
 	#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
 
+'''
 text_file = open("testdata.txt", "r")
 all_adopts_names = text_file.readlines()
 text_file.close()
@@ -102,11 +109,14 @@ text_file.close()
 for i in range(0,len(all_adopts_names)):
 	all_adopts_names[i] = all_adopts_names[i].translate(None, whitespace)
 
+
 for i in range(0, len(object_array)):
 	#groupNames[i] = obj[i].translate(None, whitespace)
-	if (object_array[i].name in all_adopts_names):
-		object_array[i].addCategory(3)
-		
+	object_array[i].delCategory(31)
+	object_array[i].delCategory(32)
+	object_array[i].delCategory(33)
+	object_array[i].sortCategory()
+'''
 
 #obj1 = GROUP("adopt-sugar",123,[1,2,3])
 #obj2 = GROUP("adopt-supermarket",456,[4,5,6])
