@@ -1,0 +1,3 @@
+:iconadopt-sugar: :devadopt-sugar:
+:iconadopt-supermarket: :devadopt-supermarket:
+:iconadopt-to-ya-drop: :devadopt-to-ya-drop:

@@ -71,22 +71,42 @@ class GROUP: #{
 		for i in range(0, len(self.categories)):
 			temp_string += str(self.categories[i]) + ","
 		temp_string = temp_string[:-1] + "]"
-		print temp_string
+		return temp_string
 	
 	def print4journals(self):
 		# :iconadoptapedia: :devadoptapedia:
-		print ":icon" + self.name + ": :dev" + self.name + ":"
+		temp_string2 = ":icon" + self.name + ": :dev" + self.name + ":"
+		return temp_string2
 #}
 
 # ===========================================================
-obj1 = GROUP("adopt-sugar",123,[1,2,3])
-obj2 = GROUP("adopt-supermarket",456,[4,5,6])
-obj3 = GROUP("adopt-to-ya-drop",789,[7,8,9])
+object_array = []
+text_file = open("testdata.txt", "r")
+groupNames = text_file.readlines()
+text_file.close()
+empty_array = [1,2,3]
 
-print obj1.watcher_count
-obj1.updateWC()
-print obj1.watcher_count
+for i in range(0, len(groupNames)):
+	groupNames[i] = groupNames[i].translate(None, whitespace)
+	exec_string = 'x = GROUP(' + groupNames[i] + ')'
+	exec exec_string
+	#x = GROUP(groupNames[i],i,empty_array)
+	#x.updateWC()
+	object_array.append(x)
+	#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
 
-print("-------")
-obj1.print4txts()
-obj2.print4journals()
+
+#obj1 = GROUP("adopt-sugar",123,[1,2,3])
+#obj2 = GROUP("adopt-supermarket",456,[4,5,6])
+#obj3 = GROUP("adopt-to-ya-drop",789,[7,8,9])
+
+#print obj1.watcher_count
+#obj1.updateWC()
+#print obj1.watcher_count
+
+#print("-------")
+text_file = open("testdata2.txt", "w")
+for i in range(0, len(object_array)):
+	temp_string3 = object_array[i].print4journals() + "\n"
+	text_file.write(temp_string3)
+text_file.close()
