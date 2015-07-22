@@ -59,8 +59,8 @@ class GROUP: #{
 		self.name = name
 		self.watcher_count = watcher_count
 		self.categories = categories
-	def addCategory(self):
-		categories.append()
+	def addCategory(self, value):
+		self.categories.append(value)
 	
 	def updateWC(self):
 		self.watcher_count = return_num_of_watchers(self.name)
@@ -70,21 +70,21 @@ class GROUP: #{
 		temp_string = "'" + self.name + "'," + str(self.watcher_count) + ",["
 		for i in range(0, len(self.categories)):
 			temp_string += str(self.categories[i]) + ","
-		temp_string = temp_string[:-1] + "]"
+		temp_string = temp_string[:-1] + "]\n"
 		return temp_string
 	
 	def print4journals(self):
 		# :iconadoptapedia: :devadoptapedia:
-		temp_string2 = ":icon" + self.name + ": :dev" + self.name + ":"
+		temp_string2 = ":icon" + self.name + ": :dev" + self.name + ": \n"
 		return temp_string2
 #}
 
 # ===========================================================
 object_array = []
-text_file = open("testdata.txt", "r")
+text_file = open("all_data.txt", "r")
 groupNames = text_file.readlines()
 text_file.close()
-empty_array = [1,2,3]
+empty_array = [31,32,33]
 
 for i in range(0, len(groupNames)):
 	groupNames[i] = groupNames[i].translate(None, whitespace)
@@ -95,6 +95,18 @@ for i in range(0, len(groupNames)):
 	object_array.append(x)
 	#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
 
+text_file = open("testdata.txt", "r")
+all_adopts_names = text_file.readlines()
+text_file.close()
+
+for i in range(0,len(all_adopts_names)):
+	all_adopts_names[i] = all_adopts_names[i].translate(None, whitespace)
+
+for i in range(0, len(object_array)):
+	#groupNames[i] = obj[i].translate(None, whitespace)
+	if (object_array[i].name in all_adopts_names):
+		object_array[i].addCategory(3)
+		
 
 #obj1 = GROUP("adopt-sugar",123,[1,2,3])
 #obj2 = GROUP("adopt-supermarket",456,[4,5,6])
@@ -107,6 +119,6 @@ for i in range(0, len(groupNames)):
 #print("-------")
 text_file = open("testdata2.txt", "w")
 for i in range(0, len(object_array)):
-	temp_string3 = object_array[i].print4journals() + "\n"
-	text_file.write(temp_string3)
+	#temp_string3 = str(object_array[i].categories[0]) + "\n"
+	text_file.write(object_array[i].print4txts())
 text_file.close()

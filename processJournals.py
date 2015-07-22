@@ -13,7 +13,7 @@ text_file = open("testdata2.txt", "r")
 groupNames = text_file.readlines()
 text_file.close()
 
-text_file2 = open("all_data.txt", "w")
+text_file2 = open("testdata.txt", "w")
 
 for i in range(0, len(groupNames)):
 	if groupNames[i][0] == " ":
