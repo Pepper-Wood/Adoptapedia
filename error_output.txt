@@ -1,0 +1,323 @@
+0:   adoptable-centre   2120
+1:   adoptable-network   None
+2:   adoptable-ocs   5217
+3:   adoptable-orphanage   652
+4:   adoptable-planet   1035
+5:   adoptablehub   810
+6:   adoptables-for-fun   2265
+7:   adoptables-for-sale   270
+8:   adoptablesunlimited   161
+9:   adoptacanine   600
+10:   adoptadorables   845
+11:   adoptananimal   6973
+12:   adoptasonic   683
+13:   adoptclub   53
+14:   adoption--center   4235
+15:   adoption-city   6802
+16:   adoption-concoctions   269
+17:   adoption-mania   4867
+18:   adoption-team-sales   None
+19:   adoptionclub   13189
+20:   adoptionhouse   276
+21:   adoptions-galore   329
+22:   adoptions-guild   2858
+23:   adoptohobia   467
+24:   adopts-4-love   1179
+25:   adopts-4-sale   1669
+26:   adopts-are-our-lives   None
+27:   adopts-for-less   113
+28:   adopts-symphony   734
+29:   adopts-yo   900
+30:   adopts4us   1584
+31:   adoptscafe   0
+32:   adoptsforthewin   63
+33:   adoptsoverload   357
+34:   adoptsworld   214
+35:   adopttoday   1876
+36:   adoptz   1119
+37:   adorableadoptshoppe   1525
+38:   adorbsadopts   1107
+39:   adoreandadopt   775
+40:   adotables   3411
+41:   adult-adopts   259
+42:   aerodilsadoptables   222
+43:   agency-of-adoption   3450
+44:   ah-orphanage   53
+45:   all-adopts   5878
+46:   all-adopts-accepted   943
+47:   all-adoptsaccepted   None
+48:   all-point-adoptables   5686
+49:   alladoptables   3981
+50:   allocadopts   996
+51:   allthecuteadopts   1087
+52:   always-adopts   100
+53:   amazing-adopts   5679
+54:   amazingly-adoptable   2304
+55:   among-the-adoptables   287
+56:   animal-adopt   418
+57:   animal-adopties   0
+58:   animaladoptionagency   1826
+59:   animalsforadoption   123
+60:   animeadoptables   None
+61:   any-adopts   823
+62:   any-species-breeders   112
+63:   anyadoptables   None
+64:   anyadopts   1944
+ERROR - COULD NOT LOAD anyadoptscentral
+65:   anyadoptscentral   0
+66:   anything-adopts   1354
+ERROR - COULD NOT LOAD ari-adopts
+67:   ari-adopts   0
+ERROR - COULD NOT LOAD arty-adopts
+68:   arty-adopts   0
+69:   auction-adoptables   2077
+70:   auctionadopts   1023
+71:   august-adopts   None
+ERROR - COULD NOT LOAD awesome-adopt-club
+72:   awesome-adopt-club   0
+73:   awesomeadoptsclub   870
+ERROR - COULD NOT LOAD baelon-realms-adopts
+74:   baelon-realms-adopts   0
+ERROR - COULD NOT LOAD bipedal-adopts
+75:   bipedal-adopts   0
+76:   breed-and-adopt   3681
+ERROR - COULD NOT LOAD breed-n-adopt
+77:   breed-n-adopt   0
+ERROR - COULD NOT LOAD bright-adopts
+78:   bright-adopts   0
+ERROR - COULD NOT LOAD canidadoptandtemps
+79:   canidadoptandtemps   0
+ERROR - COULD NOT LOAD canvas-cuties
+80:   canvas-cuties   0
+ERROR - COULD NOT LOAD center-of-adoption
+81:   center-of-adoption   0
+ERROR - COULD NOT LOAD cheap-adopts
+82:   cheap-adopts   0
+ERROR - COULD NOT LOAD cheap-sonic-adopts
+83:   cheap-sonic-adopts   0
+84:   cheapadopts-commish   2
+ERROR - COULD NOT LOAD checksadopt
+85:   checksadopt   0
+ERROR - COULD NOT LOAD chibiadopts
+86:   chibiadopts   0
+ERROR - COULD NOT LOAD club-valizan
+87:   club-valizan   0
+ERROR - COULD NOT LOAD colorful-adoptables
+88:   colorful-adoptables   0
+ERROR - COULD NOT LOAD crazedadopts
+89:   crazedadopts   0
+ERROR - COULD NOT LOAD crazy-adopts
+90:   crazy-adopts   0
+ERROR - COULD NOT LOAD creation-adopts
+91:   creation-adopts   0
+ERROR - COULD NOT LOAD creature---adopts
+92:   creature---adopts   0
+93:   creature-crafters   32
+ERROR - COULD NOT LOAD creepyandcute-adopts
+94:   creepyandcute-adopts   0
+ERROR - COULD NOT LOAD customadopts
+95:   customadopts   0
+96:   cute-ad0ptables   348
+ERROR - COULD NOT LOAD cute-adoptables-here
+97:   cute-adoptables-here   0
+98:   cuteadopties   None
+ERROR - COULD NOT LOAD cutecheappointadopts
+99:   cutecheappointadopts   0
+100:   cutefelineadopts   398
+ERROR - COULD NOT LOAD cutest-adoptables
+101:   cutest-adoptables   0
+ERROR - COULD NOT LOAD cygnia
+102:   cygnia   0
+ERROR - COULD NOT LOAD da-adopts
+103:   da-adopts   0
+ERROR - COULD NOT LOAD daadoptablecentral
+104:   daadoptablecentral   0
+ERROR - COULD NOT LOAD dadoptable
+105:   dadoptable   0
+ERROR - COULD NOT LOAD dadopts
+106:   dadopts   0
+ERROR - COULD NOT LOAD daily-adoptables
+107:   daily-adoptables   0
+ERROR - COULD NOT LOAD delightful-adopts
+108:   delightful-adopts   0
+ERROR - COULD NOT LOAD derptastical
+109:   derptastical   0
+ERROR - COULD NOT LOAD designsellers
+110:   designsellers   0
+ERROR - COULD NOT LOAD designtown
+111:   designtown   0
+ERROR - COULD NOT LOAD deviant-in-need
+112:   deviant-in-need   0
+ERROR - COULD NOT LOAD doadopt
+113:   doadopt   0
+ERROR - COULD NOT LOAD draw-to-adopt
+114:   draw-to-adopt   0
+ERROR - COULD NOT LOAD dreamer-adopts
+115:   dreamer-adopts   0
+ERROR - COULD NOT LOAD dripdropadoptgroup
+116:   dripdropadoptgroup   0
+ERROR - COULD NOT LOAD effort-adoptables
+117:   effort-adoptables   0
+ERROR - COULD NOT LOAD elementiiae
+118:   elementiiae   0
+ERROR - COULD NOT LOAD elite-adoptables
+119:   elite-adoptables   0
+ERROR - COULD NOT LOAD ello-adopts
+120:   ello-adopts   0
+ERROR - COULD NOT LOAD enchantingadopts
+121:   enchantingadopts   0
+ERROR - COULD NOT LOAD epical-adoptables
+122:   epical-adoptables   0
+ERROR - COULD NOT LOAD everyadoptable
+123:   everyadoptable   0
+ERROR - COULD NOT LOAD everythingadopts
+124:   everythingadopts   0
+ERROR - COULD NOT LOAD fantasyadopts1
+125:   fantasyadopts1   0
+ERROR - COULD NOT LOAD forever-adoptin
+126:   forever-adoptin   0
+ERROR - COULD NOT LOAD free-adopts-only
+127:   free-adopts-only   0
+ERROR - COULD NOT LOAD freedreamselfyadopts
+128:   freedreamselfyadopts   0
+ERROR - COULD NOT LOAD freehorseaoptables
+129:   freehorseaoptables   0
+ERROR - COULD NOT LOAD fursona-home
+130:   fursona-home   0
+ERROR - COULD NOT LOAD fuzzballs-for-points
+131:   fuzzballs-for-points   0
+ERROR - COULD NOT LOAD golds-adoptables
+132:   golds-adoptables   0
+ERROR - COULD NOT LOAD gos-adoptables
+133:   gos-adoptables   0
+ERROR - COULD NOT LOAD hand-drawn-adopts
+134:   hand-drawn-adopts   0
+ERROR - COULD NOT LOAD hatchables
+135:   hatchables   0
+ERROR - COULD NOT LOAD heavynsadoptionhome
+136:   heavynsadoptionhome   0
+ERROR - COULD NOT LOAD heylookandadoptgroup
+137:   heylookandadoptgroup   0
+ERROR - COULD NOT LOAD high-class-adopts
+138:   high-class-adopts   0
+ERROR - COULD NOT LOAD high-quality-adopts
+139:   high-quality-adopts   0
+ERROR - COULD NOT LOAD home-for-adoptables
+140:   home-for-adoptables   0
+ERROR - COULD NOT LOAD home-of-adoptables
+141:   home-of-adoptables   0
+ERROR - COULD NOT LOAD homelessadopts
+142:   homelessadopts   0
+ERROR - COULD NOT LOAD honeycandies
+143:   honeycandies   0
+ERROR - COULD NOT LOAD hot-adopts
+144:   hot-adopts   0
+ERROR - COULD NOT LOAD hot-adoptz
+145:   hot-adoptz   0
+146:   hqadopts   None
+147:   humanadoptsonly   845
+148:   humanized-adoptables   4617
+149:   humankemonoadopts   2458
+150:   humanoid-adopts   None
+151:   humanoidadopts   345
+152:   inksplash-adopts   652
+153:   insane--adopts   305
+154:   insane-adoptables   475
+155:   ior-adoptables   None
+ERROR - COULD NOT LOAD jolly0adopts
+156:   jolly0adopts   0
+157:   kawaii-adopty   59
+158:   kawaii-mafia-adopts   1870
+159:   kawaiiadoptablegroup   303
+160:   kemonomimi-adopts   887
+161:   kirikitties   None
+162:   koala-tea-adoptables   1560
+163:   lais-orphanage   98
+164:   leafy-adopts   1047
+165:   legit-breedables   None
+166:   leibe-adopts   211
+167:   lets-adopt-something   0
+168:   lily-pad-adoption   4509
+169:   lion-adopters   576
+170:   lnnovation   0
+171:   lovelyadoptables   None
+172:   loving--adopts   1066
+173:   luna-fantasy-adopts   1256
+174:   marvelous-adoptables   2556
+175:   mcadoptables   None
+176:   mission-adopt   None
+177:   mlpadoptionismagic   1735
+178:   mlpadopts   None
+ERROR - COULD NOT LOAD moonstruck-center
+179:   moonstruck-center   0
+180:   more-adoptables-now   1036
+ERROR - COULD NOT LOAD polished-adopts
+181:   polished-adopts   0
+182:   ponies-need-homes   29
+183:   pony-adoptables   1511
+ERROR - COULD NOT LOAD premium-adoptables
+184:   premium-adoptables   0
+ERROR - COULD NOT LOAD prettycuteadopts
+185:   prettycuteadopts   0
+ERROR - COULD NOT LOAD sell-your-adopts
+186:   sell-your-adopts   0
+187:   sonic-adoptionagency   722
+ERROR - COULD NOT LOAD sonic-adopts
+188:   sonic-adopts   0
+189:   sonicadoopts   821
+ERROR - COULD NOT LOAD sonicadoptables
+190:   sonicadoptables   0
+ERROR - COULD NOT LOAD sonicadoptablesfree
+191:   sonicadoptablesfree   0
+192:   spellboundrealms   None
+ERROR - COULD NOT LOAD star-adoptables
+193:   star-adoptables   0
+ERROR - COULD NOT LOAD storms-adopt-center
+194:   storms-adopt-center   0
+ERROR - COULD NOT LOAD summers-garden
+195:   summers-garden   0
+196:   superadoptioncentre   82
+ERROR - COULD NOT LOAD sweetie--adopts
+197:   sweetie--adopts   0
+ERROR - COULD NOT LOAD sweetponyadopt
+198:   sweetponyadopt   0
+ERROR - COULD NOT LOAD takeanadoptablehome
+199:   takeanadoptablehome   0
+ERROR - COULD NOT LOAD thatoneadoptgroup
+200:   thatoneadoptgroup   0
+ERROR - COULD NOT LOAD the-a-agency
+201:   the-a-agency   0
+ERROR - COULD NOT LOAD the-adoption-agency
+202:   the-adoption-agency   0
+ERROR - COULD NOT LOAD the-wolf-pound
+203:   the-wolf-pound   0
+ERROR - COULD NOT LOAD theadoptablesclub
+204:   theadoptablesclub   0
+ERROR - COULD NOT LOAD ultimateadopts
+205:   ultimateadopts   0
+ERROR - COULD NOT LOAD underlandadopts
+206:   underlandadopts   0
+ERROR - COULD NOT LOAD unhuman-adopts
+207:   unhuman-adopts   0
+ERROR - COULD NOT LOAD unknown-adopt-makers
+208:   unknown-adopt-makers   0
+ERROR - COULD NOT LOAD viokatysseadopts
+209:   viokatysseadopts   0
+ERROR - COULD NOT LOAD wanna-adopt
+210:   wanna-adopt   0
+ERROR - COULD NOT LOAD welcomedadoptables
+211:   welcomedadoptables   0
+ERROR - COULD NOT LOAD wolf-a-meow-adopts
+212:   wolf-a-meow-adopts   0
+ERROR - COULD NOT LOAD world-of-adopts
+213:   world-of-adopts   0
+ERROR - COULD NOT LOAD worldwideadopts
+214:   worldwideadopts   0
+ERROR - COULD NOT LOAD worth-it-adoptables
+215:   worth-it-adoptables   0
+ERROR - COULD NOT LOAD woven-darkness-adopt
+216:   woven-darkness-adopt   0
+ERROR - COULD NOT LOAD xxfan-adoptsxx
+217:   xxfan-adoptsxx   0
+ERROR - COULD NOT LOAD zee-adopts
+218:   zee-adopts   0

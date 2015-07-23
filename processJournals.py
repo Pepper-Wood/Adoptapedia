@@ -9,15 +9,15 @@ import re
 
 # ===========================================================
 object_array = []
-text_file = open("testdata2.txt", "r")
+text_file = open("testdata.txt", "r")
 groupNames = text_file.readlines()
 text_file.close()
 
-text_file2 = open("testdata.txt", "w")
+text_file2 = open("testdata2.txt", "w")
 
 for i in range(0, len(groupNames)):
-	if groupNames[i][0] == " ":
-		text_file2.write(groupNames[i][1:])
+	if groupNames[i][0:23] == "ERROR - COULD NOT LOAD ":
+		text_file2.write(groupNames[i][23:])
 	else:
 		text_file2.write(groupNames[i])
 	#groupNames[i] = groupNames[i].translate(None, whitespace)

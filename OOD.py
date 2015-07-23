@@ -10,6 +10,7 @@ Adoptable Group:
 	- Categories (array of integers)
 '''
 
+import time
 import urllib2
 from HTMLParser import HTMLParser
 from string import whitespace
@@ -20,45 +21,90 @@ def hasNumbers(inputString): #{
 #}
 
 # -----------------------------------------------------------
-def return_num_of_watchers(group_name): #{
-	url_name = "http://" + group_name + ".deviantart.com"
-	req = urllib2.Request(url_name)
-	response = urllib2.urlopen(req)
-	page_source = response.read()
-	
-	watch_list = []
-	
-	# ---------------------------------------------------
-	# create a subclass and override the handler methods
-	class MyHTMLParser(HTMLParser):
-		def handle_data(self, data):
-			if data.find("atchers") != -1:
-				watch_list.append(data)
-	# ---------------------------------------------------
-	# instantiate the parser and fed it some HTML
-	parser = MyHTMLParser()
-	parser.feed(page_source)
-	
-	watch_integer = ''
-	if len(watch_list) == 0: #{
-		print group_name + "  DOES NOT EXIST"
-		return 1
-	#}
-	for i in range(0, len(watch_list)): #{
-		watch_list[i] = watch_list[i].replace(' Watchers','')
-		if hasNumbers(watch_list[i]):
-			watch_integer = watch_list[i]
-	#}
+# https://github.com/Gullimama/urllib2/blob/master/urltests/linkcheck.py
+def checklink(link):
+	#right = []
+	#wrong = []
+	#for link in links:
+	try:
+		req = urllib2.Request(link, headers={'User-Agent' : "Magic Browser"}) 
+		con = urllib2.urlopen( req )
+		return 1 # TRUE - Link does exist
+		#right.append(link)
+	except :
+		return 0 # FALSE - Link does not work
+		#wrong.append(link)
+	#print "right links are \n"
+	#for link in right:
+	#	print link
+	#print "wrong links are \n"
+	#for link in wrong:
+	#	print link
 
-	if watch_integer == '': #{
-		print group_name + "  DOES NOT EXIST"
-		return 1
+# -----------------------------------------------------------
+def return_num_of_watchers(group_name): #{
+	url_name = "http://www." + group_name + ".deviantart.com"
+	#print url_name + '   ',
+	if checklink(url_name) == 1: #{
+		#response = urllib2.Request(url_name, postBackData, { 'User-Agent' : 'My User Agent' })
+		req = urllib2.Request(url_name, headers={'User-Agent' : "Magic Browser"}) 
+		con = urllib2.urlopen( req )
+		page_source = con.read()
+		
+		watch_list = []
+		account_check_array = []
+		
+		# ---------------------------------------------------
+		# create a subclass and override the handler methods
+		class MyHTMLParser(HTMLParser):
+			def handle_data(self, data):
+				account_check_array.append(data)
+				#if data.find("atchers") != -1:
+				#	watch_list.append(data)
+		# ---------------------------------------------------
+		# instantiate the parser and fed it some HTML
+		parser = MyHTMLParser()
+		parser.feed(page_source)
+		
+		#determine if an entry is an account or a group
+		if page_source.find('content="&nbsp;">') != -1:
+			# watcher count will be set at 0
+			#print "THIS IS AN ACCOUNT-----------------------"
+			return 0
+		
+		watch_integer = []
+		for i in range(0, len(account_check_array)):
+			if ("atchers" in account_check_array[i]) and hasNumbers(account_check_array[i]):
+				account_check_array[i] = account_check_array[i].replace(' Watchers','')
+				watch_integer.append(account_check_array[i-1])
+				watch_integer.append(account_check_array[i])
+				#print "..." + account_check_array[i] + "..."
+				#print "..." + account_check_array[i-1] + "..."
+		#for i in range(0, len(watch_integer)):
+		#	print watch_integer[i],
+		#print "\n-----------------"
+		
+		for i in range(0, len(watch_integer)): #{
+			if ',' in watch_integer[i]: #{
+				watch_integer[i] = watch_integer[i].replace(',','')
+				if watch_integer[i].isdigit(): #check if the remaining string is only numbers
+					return int(watch_integer[i])
+					#print "---------------------Value found -----------------------"
+			#}
+			else: #{
+				if watch_integer[i].isdigit(): #check if the remaining string is only numbers
+					return int(watch_integer[i])
+					#print "---------------------Value found -----------------------"
+			#}
+		#}
 	#}
-	if ',' in watch_integer:
-		final_int = int(watch_integer.replace(',',''))
 	else:
-		final_int = int(watch_integer)
-	return final_int
+		print "URL NOT FOUND -----------------------"
+		return 0
+	#	except urllib2.HTTPError, e: #{
+	#		print "ERROR - COULD NOT LOAD " + group_name
+	#		return 0
+		#}
 #}
 
 # -----------------------------------------------------------
@@ -99,17 +145,20 @@ object_array = []
 text_file = open("all_data.txt", "r")
 groupNames = text_file.readlines()
 text_file.close()
-empty_array = [31,32,33]
-
+#empty_array = [31,32,33]
+t0 = time.time()
 for i in range(0, len(groupNames)):
 	groupNames[i] = groupNames[i].translate(None, whitespace)
 	exec_string = 'x = GROUP(' + groupNames[i] + ')'
 	exec exec_string
 	#x = GROUP(groupNames[i],i,empty_array)
-	x.updateWC()
+	#x.updateWC()
+	groupNames[i] = groupNames[i].translate(None, whitespace)
+	#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(x.name)) + "   || " + str((i/float(len(groupNames)))*100) + "%"
+	print groupNames[i] + '\t\t' + str(return_num_of_watchers(x.name))# + "   || " + str((i/float(len(groupNames)))*100) + "%"
 	object_array.append(x)
 	#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
-
+t1 = time.time()
 '''
 text_file = open("testdata.txt", "r")
 all_adopts_names = text_file.readlines()
@@ -141,3 +190,8 @@ for i in range(0, len(object_array)):
 	#temp_string3 = str(object_array[i].categories[0]) + "\n"
 	text_file.write(object_array[i].print4txts())
 text_file.close()
+t2 = time.time()
+
+print "updateWC    " + str(t1-t0)
+print "text_file   " + str(t2-t1)
+print "TOTAL TIME  " + str(t2-t0)
