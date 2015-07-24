@@ -43,6 +43,7 @@ def checklink(link):
 
 # -----------------------------------------------------------
 def return_num_of_watchers(group_name): #{
+	time.sleep(10)
 	url_name = "http://www." + group_name + ".deviantart.com"
 	#print url_name + '   ',
 	if checklink(url_name) == 1: #{
