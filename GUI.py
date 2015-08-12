@@ -3,14 +3,6 @@ import Tkinter
 from Tkinter import *
 import ttk
 import Tkinter,tkFileDialog
-#import datetime
-#from PIL import Image, ImageTk
-#import os, sys
-#import time, math
-#import zhinst.ziPython, zhinst.utils
-#import matplotlib
-#import matplotlib.pyplot as plt
-#from numpy import *
 
 root = Tk()
 root.title("Adoptapedia")
@@ -53,31 +45,20 @@ class GROUP: #{
 # -----------------------------------------------------------
 def load_data():
 	print "cool"
-	'''
-	object_array = []
-	text_file = open("all_data.txt", "r")
-	groupNames = text_file.readlines()
-	text_file.close()
-	for i in range(0, len(groupNames)):
-		groupNames[i] = groupNames[i].translate(None, whitespace)
-		exec_string = 'x = GROUP(' + groupNames[i] + ')'
-		exec exec_string
-		#x = GROUP(groupNames[i],i,empty_array)
-		#x.updateWC()
-		groupNames[i] = groupNames[i].translate(None, whitespace)
-		#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(x.name)) + "   || " + str((i/float(len(groupNames)))*100) + "%"
-		print groupNames[i] + '\t\t' + str(return_num_of_watchers(x.name))# + "   || " + str((i/float(len(groupNames)))*100) + "%"
-		object_array.append(x)
-		#print str(i) + ':   ' + groupNames[i] + '   ' + str(return_num_of_watchers(groupNames[i]))
-	'''
-	
+
 # -----------------------------------------------------------
 def add_groups():
+	add_win = Toplevel()
+	add_win.wm_title('Add Groups')
 	print "adding groups....."
+	Button(add_win, text = "Done", command = add_win.destroy).grid(row = 0, sticky =W+E+N+S, ipadx = 60, padx = 5, pady = 5, columnspan=3)
 
 # -----------------------------------------------------------
 def delete_groups():
+	delete_win = Toplevel()
+	delete_win.wm_title('Delete Groups')
 	print "deleting groups..."
+	Button(delete_win, text = "Done", command = delete_win.destroy).grid(row = 0, sticky =W+E+N+S, ipadx = 60, padx = 5, pady = 5, columnspan=3)
 
 # -----------------------------------------------------------
 def updateWC():

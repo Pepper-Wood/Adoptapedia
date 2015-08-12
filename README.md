@@ -8,8 +8,8 @@ Past incarnations were written in Java and C++. The program is being currently r
 
 To-Do List
 ===========
-[] Finish basic design of the GUI.
-[] delete_groups() - Create function that deletes groups from the object_list variable
-[] add_groups() - Create function that adds groups to the object_list variable with complete specs
-[] updateWC() - function currently bipasses 403 errors, but still returning nulls for groups that display watch counts
-[] saveAndQuit() - quitting portion of function completed. Specifications for saving the data to .txt files required
+- Finish basic design of the GUI.
+- delete_groups() - Create function that deletes groups from the object_list variable
+- add_groups() - Create function that adds groups to the object_list variable with complete specs
+- updateWC() - function currently bipasses 403 errors, but still returning nulls for groups that display watch counts
+- saveAndQuit() - quitting portion of function completed. Specifications for saving the data to .txt files required
