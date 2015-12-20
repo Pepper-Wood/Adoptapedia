@@ -1,0 +1,12 @@
+ 
+adopt-agency all
+adoptable-tearoom all
+all agency payment base fandom quality species
+all-4-all all
+nyamrianworkshop species
+prittylittleponies fandom
+skellkninesanctuary species
+testgroup1 fandom base species
+testgroup2 all species agency base fandom quality payment
+testgroup4 all
+testgroup5 fandom

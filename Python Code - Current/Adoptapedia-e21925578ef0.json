@@ -1,0 +1,11 @@
+{
+  "type": "service_account",
+  "private_key_id": "e21925578ef0ce643be25d1262266ac76e2b71e3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCiAniBLPRrU9JB\nLtUOvjUzHhUM3VeQ4hoV0RA6TywS72W45RYnsglzHEQnLJqgMBgEACfnfhzlRSoU\nEkgNAq6eU5SgpStRCT0eMf8p98krix3t6qY49SUQgyKs4Z0f/BirC8wio7S13Mip\njF45IRZgOj2I2j7nYwM5aPrwIDQ9o4ouAlwqR0LOaEYqeSKvnPOS1z3iFcCB+Jb8\nRrdPnZhfytR2y9JByU5hikMUFQWv3w2UsWMVFfqHKcP0p2eeY8hXFGVqOKKsgzEk\nQ454KDscdSdfp7VbKdi7WhYMyks1M7APvY0YUJb1b09sjJbmxyAi/qLBfpdsG0u6\n4+yC4ex3AgMBAAECggEATnFLz5/oqJ7pSs5WMtE+CQYjwxrY7znKz41ugg0blf98\nDU4+r/GwSaACD8W1CKLAvg8lQxz4+LnIafeAE2ydB+QILtBKbO5APYKPvc5QBVlS\noIPg/+sSizAzdem3nmj9uLP5nzwMn5HLRuzEIn02zFjmuoCRvI9gXEfMWL//C2iB\nq4SWh244f8WT/xkxbssWggFYJzikiUdkxo5xTpqfpKrkLOHT6FG1JAzgNyVHndQ5\n7ME9rzX0VRjFHvcQWnGgdI1xKX9qodXB8W9/n4oqQok2ghW7jaPerI37H1SmMDIU\n9XyrKK0dbRKhdXgMlOUCZr7wcrYObZcnZcn3AeLgAQKBgQDg6E1CcDKSkiJEcFnp\n+qc1dWQxHr9qGEDCYF3bSCbmIdEjovsJuVUPpXdiH+epWDD44cPr4E42UYhbf5p9\nq29KX2yYd8FRH4pl7VDagLJ+OVSg1PnZdX34E0g92Ma4vXeXOiSEgDOMVMeH7ktp\nGBWNIRtujAh4/e+iA1JugHbQdwKBgQC4aCdioBCfeJojHw3CTrD21lv1jmAVytom\nRPKS7bZpcjNRkUIT7mpDAy5e788DL9wZqR/JnuuOz1MqwjUIA0SQPz90/Kioo1T9\n4q3D4jYu5HRSsGawmHQMJ0YXu5VK2mpAFBeXoy4QMVKQutBQMyugRb22X67XPrhz\nPLyZT7DEAQKBgQDSQrr/8s6E0pOwseyNXyT1SGM7vMgs0rGwRtFYENM08MaJ73OL\n+rT4JLRAix1T5zwZYU999DyKcZzuFZSECkLIH//xZnvXcIo9kii1rf2xHb3tgk52\nq23x/2zZTREzYwYr3lKHgScv+Y50mSXtAXQcdagkqEu/eX+PUlW9MuJhLwKBgQC0\n+KIOS/+EQRsjdIpQMmHBHEVLCtqJCHZmMCvOvbLScNykI+WxIbzu3uRXDwkdm45p\nMGydtXR+xkBcKhNZNbvHxApGiN4MAZ6bOiZFom6CPnlZ3PwqOrNIahKDn/e3afnz\nwMQWcHH4Oi9JEcz1qAIcW9T+cZBodIkXrnd4DZjwAQKBgAITxQNr+XzZhdIlj/FM\n7vrR5MDzIm6YqGAoBjm6Xq2E3HhGR6j1OLJmlUKsbN7pxNeLIP+dphblb0guvQt5\nKkkoDbe1rgidbjjA5xTeA3wwb1vfEGmZa8VqXhxfiEuseRTWoEGhZi8g7z9XAzS6\nqLXeJi74nsQ1hSiwekcq4n2E\n-----END PRIVATE KEY-----\n",
+  "client_email": "account-1@adoptapedia.iam.gserviceaccount.com",
+  "client_id": "104802860908324847662",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/account-1%40adoptapedia.iam.gserviceaccount.com"
+}
