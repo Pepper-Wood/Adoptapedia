@@ -1,70 +1,216 @@
-12
+441
 
 
 
 
 http://adoptapedia.deviantart.com/journal/Directory-List-of-All-Registered-Groups-357048592
-:icon: :dev:
-:iconadopt-agency: :devadopt-agency:
-:iconadoptable-tearoom: :devadoptable-tearoom:
-:iconall: :devall:
-:iconall-4-all: :devall-4-all:
-:iconnyamrianworkshop: :devnyamrianworkshop:
-:iconprittylittleponies: :devprittylittleponies:
-:iconskellkninesanctuary: :devskellkninesanctuary:
-:icontestgroup1: :devtestgroup1:
-:icontestgroup2: :devtestgroup2:
-:icontestgroup4: :devtestgroup4:
-:icontestgroup5: :devtestgroup5:
+:icon1all-adopts1:    :icon4d0p74bl35:    :iconabsolutely-adopt-us:    :iconacerbeonis:    :iconadmirableadoptables:    
+:iconadopt-a-blessing:    :iconadopt-a-cutie:    :iconadopt-a-fantroll:    :iconadopt-a-fursona:    :iconadopt-a-oc:    
+:iconadopt-a-pearl:    :iconadopt-a-pony:    :iconadopt-agency:    :iconadopt-an-adoptable:    :iconadopt-an-oc-here:    
+:iconadopt-awesomely:    :iconadopt-bases:    :iconadopt-canines:    :iconadopt-human:    :iconadopt-me-a-furrie:    
+:iconadopt-me-plz:    :iconadopt-oasis:    :iconadopt-plaza:    :iconadopt-sugar:    :iconadopt-supermarket:    
+:iconadopt-to-ya-drop:    :iconadopt-world-around:    :iconadoptababes:    :iconadoptable-babies:    :iconadoptable-bases:    
+:iconadoptable-be-mine:    :iconadoptable-boutique:    :iconadoptable-center:    :iconadoptable-city:    :iconadoptable-corner:    
+:iconadoptable-den:    :iconadoptable-network:    :iconadoptable-ocs:    :iconadoptable-orphanage:    :iconadoptable-overstock:    
+:iconadoptable-park:    :iconadoptable-planet:    :iconadoptable-tearoom:    :iconadoptable-utopia:    :iconadoptablehub:    
+:iconadoptableisland:    :iconadoptablelovers:    :iconadoptablemarketplace:    :iconadoptables-4-points:    :iconadoptables-adopt:    
+:iconadoptables-and-all:    :iconadoptables-around:    :iconadoptables-colors:    :iconadoptables-for-fun:    :iconadoptables-for-sale:    
+:iconadoptables-forever:    :iconadoptables-frenzy:    :iconadoptables-land:    :iconadoptables2love:    :iconadoptablesandthings:    
+:iconadoptableseverywhere:    :iconadoptablesforanyone:    :iconadoptableshamlet:    :iconadoptableshaven:    :iconadoptableshrine:    
+:iconadoptablesparadise:    :iconadoptablesunlimited:    :iconadoptacanine:    :iconadoptadorables:    :iconadoptalongwithme:    
+:iconadoptananimal:    :iconadoptasonic:    :iconadoptcafe:    :iconadoptclub:    :iconadoptia:    
+:iconadoption--center:    :iconadoption-city:    :iconadoption-concoctions:    :iconadoption-link:    :iconadoption-mania:    
+:iconadoption-planet:    :iconadoption-team-sales:    :iconadoptionagents:    :iconadoptionclub:    :iconadoptionhouse:    
+:iconadoptionparty:    :iconadoptions-galore:    :iconadoptions-guild:    :iconadoptionuniverse:    :iconadoptmachine:    
+:iconadoptme-plz:    :iconadoptohobia:    :iconadopts-4-love:    :iconadopts-4-sale:    :iconadopts-are-our-lives:    
+:iconadopts-for-less:    :iconadopts-symphony:    :iconadopts-yo:    :iconadopts4us:    :iconadoptscafe:    
+:iconadoptsforthewin:    :iconadoptsoverload:    :iconadoptsshelter:    :iconadoptsshop:    :iconadoptsworld:    
+:iconadopttoday:    :iconadoptz:    :iconadorableadopts:    :iconadorbsadopts:    :iconadoreandadopt:    
+:iconadotables:    :iconadult-adopts:    :iconaerodilsadoptables:    :iconagency-of-adoption:    :iconah-orphanage:    
+:iconall--adoptswelcome:    :iconall-4-all:    :iconall-adopts:    :iconall-adopts-accepted:    :iconall-adoptsaccepted:    
+:iconall-point-adoptables:    :iconalladoptables:    :iconallocadopts:    :iconallthecuteadopts:    :iconallyouradopts:    
+:iconalways-adopts:    :iconamazing-adopts:    :iconamazingly-adoptable:    :iconamong-the-adoptables:    :iconanimal-adopt:    
+:iconanimal-adopties:    :iconanimaladoptionagency:    :iconanimalsforadoption:    :iconanimeadoptables:    :iconany-adoptables:    
+:iconany-adopts:    :iconany-species-breeders:    :iconanyadoptables:    :iconanyadopts:    :iconanyadoptscentral:    
+:iconanyandalladopts:    :iconanything-adopts:    :iconaquaripuffs:    :iconari-adopts:    :iconarty-adopts:    
+:iconauction-adoptables:    :iconauctionadopts:    :iconaugust-adopts:    :iconauresearch:    :iconawesome-adopt-club:    
+:iconawesomeadoptsclub:    :iconawoken-shiryte:    :iconbaelon-realms-adopts:    :iconbases-for-adopts:    :iconbeeimps:    
+:iconbipedal-adopts:    :iconboople-snoots:    :iconbreed-and-adopt:    :iconbreed-n-adopt:    :iconbright-adopts:    
+:iconbutton-buds:    :iconcanidadoptandtemps:    :iconcanvas-cuties:    :iconcardtamers:    :iconceileo-species-hq:    
+:iconcelestialfeathers:    :iconcenter-of-adoption:    :iconcheap-adopts:    :iconcheap-sonic-adopts:    :iconcheapadopts-commish:    
+:iconchecksadopt:    :iconchibiadopts:    :iconchompets:    :iconclothingadopts:    :iconclub-valizan:    
+:iconcolorful-adoptables:    :iconcosmic-bears:    :iconcrackhound-penal:    :iconcrazedadopts:    :iconcrazy-adopts:    
+:iconcreation-adopts:    :iconcreature---adopts:    :iconcreature-crafters:    :iconcreepyandcute-adopts:    :iconcustomadopts:    
+:iconcute-ad0ptables:    :iconcute-adoptables-here:    :iconcuteadopties:    :iconcutecheappointadopts:    :iconcutefelineadopts:    
+:iconcutest-adoptables:    :iconcygnia:    :iconda-adoption-kennels:    :iconda-adopts:    :iconda-fleamarket:    
+:icondaadoptablecentral:    :icondadoptable:    :icondadopts:    :icondaemon-domain:    :icondaily-adoptables:    
 
+
+:icondark-volgan-skies:    :icondelightful-adopts:    :iconderptastical:    :icondesignsellers:    :icondesigntown:    
+:icondeviant-in-need:    :icondickle-fanclub:    :icondna-breeds-adopts:    :icondoadopt:    :icondonutdogs:    
+:icondraw-to-adopt:    :icondreamer-adopts:    :icondreamtones:    :icondripdropadoptgroup:    :icondumpling-dragons:    
+:iconechos-adopts-group:    :iconeffort-adoptables:    :iconelementailclans:    :iconelementiiae:    :iconeleux:    
+:iconelite-adoptables:    :iconello-adopts:    :iconenchantingadopts:    :iconepical-adoptables:    :iconeveryadoptable:    
+:iconeverythingadopts:    :iconfantasyadoptbabes:    :iconfantasyadopts1:    :iconfeathersuneheights:    :iconfemale-adopties:    
+:iconfishpuff-pond:    :iconflufferbuns:    :iconforever--adopts:    :iconforever-adoptin:    :iconforever-boutique:    
+:iconfortheloveofadopts:    :iconfree-adopts-only:    :iconfreedreamselfyadopts:    :iconfreehorseaoptables:    :iconfursona-home:    
+:iconfuzzballs-for-points:    :icongalastruck:    :iconget-a-furry:    :iconglass-bellies:    :iconglasstum-garden:    
+:icongolds-adoptables:    :icongos-adoptables:    :icongryalic:    :iconhamaside:    :iconhand-drawn-adopts:    
+:iconhard-work-adopts:    :iconhatchables:    :iconheavynsadoptionhome:    :iconhexacrura-offical:    :iconheylookandadoptgroup:    
+:iconhigh-class-adopts:    :iconhigh-quality-adopts:    :iconhome-for-adoptables:    :iconhome-of-adoptables:    :iconhomelessadopts:    
+:iconhorrorfactoryadopts:    :iconhot-adopts:    :iconhot-adoptz:    :iconhouse-of-fruit:    :iconhqadopts:    
+:iconhumanadoptsonly:    :iconhumanized-adoptables:    :iconhumankemonoadopts:    :iconhumanoid-adopts:    :iconhumanoidadopts:    
+:iconhycis-species:    :iconid-empire:    :iconimpacha-lair:    :iconinksplash-adopts:    :iconinsane--adopts:    
+:iconinsane-adoptables:    :iconior-adoptables:    :iconjolly-adopts:    :iconkawaii-adopty:    :iconkawaii-mafia-adopts:    
+:iconkawaiiadoptablegroup:    :iconkemonomimi-adopts:    :iconkirikitties:    :iconkitsunetsukiadopts:    :iconkoala-tea-adoptables:    
+:iconkoimes:    :iconksyder-closedspecies:    :iconlais-orphanage:    :iconlampdragoncave:    :iconlana-dragons:    
+:iconlavaes-world:    :iconleafy-adopts:    :iconleemaspecies:    :iconlegit-breedables:    :iconleibe-adopts:    
+:iconlets-adopt-something:    :iconlily-pad-adoption:    :iconlion-adopters:    :iconlnnovation:    :iconloulous-adopt-center:    
+:iconloveable-adoptables:    :iconlovelyadoptables:    :iconloving--adopts:    :iconluna-fantasy-adopts:    :iconmagical-tcmb:    
+:iconmalukiri-den:    :iconmantipurrfect:    :iconmarvelous-adoptables:    :iconmasquelin-clutch:    :iconmcadoptables:    
+:iconmelodidogs:    :iconmission-adopt:    :iconmisty-kingdoms:    :iconmlpadoptionismagic:    :iconmlpadopts:    
+:iconmonster-bat-junction:    :iconmoonlight-adopts:    :iconmore-adoptables-now:    :iconmy-little-adoptables:    :iconmylittleadoptable:    
+:iconmylittlepony-adopt:    :iconmystery-adopts:    :iconmysteryadoptables:    :iconmysteryadoptcentre:    :iconnautical-adopts:    
+:iconneo-adopts:    :iconnew-n-used-adopts:    :iconniftyshop:    :iconno-auction-adopts:    :iconnyamrianworkshop:    
+:icono-best-adoptables-o:    :icono-creature-adopts:    :icono0-adoptme-0o:    :iconoc-tailor:    :icononestop-adoptshop:    
+:iconooadoptablesoo:    :iconoriginal-adopts:    :iconowletspecies:    :iconpaum-paradise:    :iconpawm-phanatics:    
+:iconpaypal-adopts:    :iconpaypaladoptioncenter:    :iconpikumon:    :iconplatefighters:    :iconpoint-adoptables:    
+:iconpoint-adopties:    :iconpoint-adopts:    :iconpoint-free-adopts:    :iconpointables:    :iconpointcritters:    
+:iconpointlove:    :iconpoints-adoptions:    :iconpoints-and-cash:    :iconpoints-for-adptable:    :iconpolished-adopts:    
+:iconpon-e-qons:    :iconponies-need-homes:    :iconpony-adoptables:    :iconprecious-adoptables:    :iconpremium-adoptables:    
+:iconprettycuteadopts:    :iconprittylittleponies:    :iconpro-adopt:    :iconptsforadopt:    :iconpyrogi-adoptables:    
+:iconquality-adoptables:    :iconquality-adopts:    :iconquarrycreature:    :iconrainbow-adoptables:    :iconraindropcafe:    
+:iconrenosisaurus:    :iconrensadoptablesgroup:    :iconrumianekdogs:    :iconsailor-u:    :iconsecond-chancerescues:    
+:iconsell-your-adopts:    :iconshardwing-species:    :iconshinshiadoptables:    :iconshoppableadoptable:    :iconshtspecies:    
+:iconskellkninesanctuary:    :iconsliclop:    :iconsodaren-town:    :iconsonic--adopts:    :iconsonic-adoptionagency:    
+:iconsonic-adopts:    :iconsonicadoopts:    :iconsonicadoptables:    :iconsonicadoptablesfree:    :iconsonicadoptablesgroup:    
+:iconsonicadoptorphanage:    :iconspace-elements:    :iconspacialdescendants:    :iconspam-adopts:    :iconspellboundrealms:    
+:iconsquibtank:    :iconstar-adoptables:    :iconstarburstadoptables:    :iconstorms-adopt-center:    :iconsugar-adoptables:    
+
+
+:iconsummers-garden:    :iconsuper-adoptables:    :iconsuperadoptioncentre:    :iconsweetie--adopts:    :iconsweeties-adopts:    
+:iconsweetponyadopt:    :icontakeanadoptablehome:    :iconteacup-foxes:    :iconthatoneadoptgroup:    :iconthe-a-agency:    
+:iconthe-adopt-factory:    :iconthe-adoption-agency:    :iconthe-bagpack-cubby:    :iconthe-mais-pond:    :iconthe-ninfu-species:    
+:iconthe-sugarfactory:    :iconthe-wolf-pound:    :icontheadoptablemarket:    :icontheadoptionplace:    :icontheshallowsspecies:    
+:icontorkana-adopts:    :icontreatpups:    :icontree-of-life-adopts:    :iconultimateadopts:    :iconunderlandadopts:    
+:iconunhuman-adopts:    :iconunknown-adopt-makers:    :iconvermil-upus:    :iconviokatysseadopts:    :iconwanna-adopt:    
+:iconwelcomedadoptables:    :iconwolf-a-meow-adopts:    :iconworld-of-adopts:    :iconworldofadoptables:    :iconworldofquuel:    
+:iconworldwideadopts:    :iconworth-it-adoptables:    :iconwoven-darkness-adopt:    :iconxxfan-adoptsxx:    :iconzee-adopts:    
+:iconzyrrix:    
 
 
 http://adoptapedia.deviantart.com/journal/Directory-All-Adopts-Accepted-Groups-356536839
-:iconadopt-agency: :devadopt-agency:
-:iconadoptable-tearoom: :devadoptable-tearoom:
-:iconall-4-all: :devall-4-all:
-:icontestgroup2: :devtestgroup2:
-:icontestgroup4: :devtestgroup4:
+:icon1all-adopts1:    :icon4d0p74bl35:    :iconabsolutely-adopt-us:    :iconadmirableadoptables:    :iconadopt-a-blessing:    
+:iconadopt-a-cutie:    :iconadopt-a-fursona:    :iconadopt-a-oc:    :iconadopt-agency:    :iconadopt-an-adoptable:    
+:iconadopt-an-oc-here:    :iconadopt-awesomely:    :iconadopt-me-plz:    :iconadopt-oasis:    :iconadopt-plaza:    
+:iconadopt-sugar:    :iconadopt-supermarket:    :iconadopt-to-ya-drop:    :iconadopt-world-around:    :iconadoptababes:    
+:iconadoptable-babies:    :iconadoptable-be-mine:    :iconadoptable-boutique:    :iconadoptable-center:    :iconadoptable-city:    
+:iconadoptable-corner:    :iconadoptable-den:    :iconadoptable-network:    :iconadoptable-ocs:    :iconadoptable-orphanage:    
+:iconadoptable-overstock:    :iconadoptable-park:    :iconadoptable-planet:    :iconadoptable-tearoom:    :iconadoptable-utopia:    
+:iconadoptablehub:    :iconadoptableisland:    :iconadoptablelovers:    :iconadoptablemarketplace:    :iconadoptables-adopt:    
+:iconadoptables-and-all:    :iconadoptables-around:    :iconadoptables-colors:    :iconadoptables-for-fun:    :iconadoptables-for-sale:    
+:iconadoptables-forever:    :iconadoptables-frenzy:    :iconadoptables-land:    :iconadoptables2love:    :iconadoptablesandthings:    
+:iconadoptableseverywhere:    :iconadoptablesforanyone:    :iconadoptableshamlet:    :iconadoptableshaven:    :iconadoptableshrine:    
+:iconadoptablesparadise:    :iconadoptablesunlimited:    :iconadoptadorables:    :iconadoptalongwithme:    :iconadoptcafe:    
+:iconadoptclub:    :iconadoptia:    :iconadoption--center:    :iconadoption-city:    :iconadoption-concoctions:    
+:iconadoption-link:    :iconadoption-mania:    :iconadoption-planet:    :iconadoption-team-sales:    :iconadoptionagents:    
+:iconadoptionclub:    :iconadoptionhouse:    :iconadoptionparty:    :iconadoptions-galore:    :iconadoptions-guild:    
+:iconadoptionuniverse:    :iconadoptmachine:    :iconadoptme-plz:    :iconadoptohobia:    :iconadopts-4-love:    
+:iconadopts-4-sale:    :iconadopts-are-our-lives:    :iconadopts-yo:    :iconadopts4us:    :iconadoptscafe:    
+:iconadoptsforthewin:    :iconadoptsoverload:    :iconadoptsshelter:    :iconadoptsshop:    :iconadoptsworld:    
+:iconadopttoday:    :iconadoptz:    :iconadorableadopts:    :iconadorbsadopts:    :iconadoreandadopt:    
+:iconadotables:    :iconaerodilsadoptables:    :iconagency-of-adoption:    :iconah-orphanage:    :iconall--adoptswelcome:    
+:iconall-4-all:    :iconall-adopts:    :iconall-adopts-accepted:    :iconall-adoptsaccepted:    :iconalladoptables:    
+:iconallocadopts:    :iconallthecuteadopts:    :iconallyouradopts:    :iconalways-adopts:    :iconamazing-adopts:    
+:iconamazingly-adoptable:    :iconamong-the-adoptables:    :iconanimeadoptables:    :iconany-adoptables:    :iconany-adopts:    
+:iconanyadoptables:    :iconanyadopts:    :iconanyadoptscentral:    :iconanyandalladopts:    :iconanything-adopts:    
+:iconari-adopts:    :iconarty-adopts:    :iconauction-adoptables:    :iconaugust-adopts:    :iconawesome-adopt-club:    
+:iconawesomeadoptsclub:    :iconbaelon-realms-adopts:    :iconbreed-and-adopt:    :iconbreed-n-adopt:    :iconbright-adopts:    
+:iconcenter-of-adoption:    :iconchecksadopt:    :iconchibiadopts:    :iconclub-valizan:    :iconcolorful-adoptables:    
+:iconcrazedadopts:    :iconcrazy-adopts:    :iconcreation-adopts:    :iconcreature-crafters:    :iconcreepyandcute-adopts:    
+:iconcute-ad0ptables:    :iconcute-adoptables-here:    :iconcuteadopties:    :iconcutecheappointadopts:    :iconcutest-adoptables:    
+:iconda-adopts:    :iconda-fleamarket:    :icondaadoptablecentral:    :icondadoptable:    :icondadopts:    
+:icondaily-adoptables:    :icondelightful-adopts:    :icondesignsellers:    :icondesigntown:    :icondeviant-in-need:    
+:icondoadopt:    :icondraw-to-adopt:    :icondreamer-adopts:    :icondripdropadoptgroup:    :iconechos-adopts-group:    
+:iconello-adopts:    :iconenchantingadopts:    :iconepical-adoptables:    :iconeveryadoptable:    :iconeverythingadopts:    
+:iconfantasyadoptbabes:    :iconforever--adopts:    :iconforever-adoptin:    :iconforever-boutique:    :iconfortheloveofadopts:    
+:iconget-a-furry:    :icongolds-adoptables:    :icongos-adoptables:    :iconhand-drawn-adopts:    :iconheavynsadoptionhome:    
+:iconheylookandadoptgroup:    :iconhome-for-adoptables:    :iconhome-of-adoptables:    :iconhomelessadopts:    :iconhot-adopts:    
+:iconhot-adoptz:    :iconinksplash-adopts:    :iconinsane--adopts:    :iconinsane-adoptables:    :iconjolly-adopts:    
+:iconkawaii-adopty:    :iconkawaii-mafia-adopts:    :iconkawaiiadoptablegroup:    :iconkitsunetsukiadopts:    :iconkoala-tea-adoptables:    
+:iconlais-orphanage:    :iconleafy-adopts:    :iconleibe-adopts:    :iconlets-adopt-something:    :iconlily-pad-adoption:    
+:iconloulous-adopt-center:    :iconloveable-adoptables:    :iconlovelyadoptables:    :iconloving--adopts:    :iconluna-fantasy-adopts:    
+:iconmarvelous-adoptables:    :iconmission-adopt:    :iconmoonlight-adopts:    :iconmore-adoptables-now:    :iconmysteryadoptables:    
+:iconnautical-adopts:    :iconneo-adopts:    :iconnew-n-used-adopts:    :iconniftyshop:    :icono-best-adoptables-o:    
+:icono0-adoptme-0o:    :icononestop-adoptshop:    :iconooadoptablesoo:    :iconoriginal-adopts:    :iconpoints-adoptions:    
+:iconpoints-and-cash:    :iconprecious-adoptables:    :iconpremium-adoptables:    :iconprettycuteadopts:    :iconrainbow-adoptables:    
+:iconrensadoptablesgroup:    :iconsecond-chancerescues:    :iconsell-your-adopts:    :iconshoppableadoptable:    :iconspam-adopts:    
+:iconstar-adoptables:    :iconstorms-adopt-center:    :iconsugar-adoptables:    :iconsuper-adoptables:    :iconsuperadoptioncentre:    
+:iconsweetie--adopts:    :iconsweeties-adopts:    :icontakeanadoptablehome:    :iconthatoneadoptgroup:    :iconthe-a-agency:    
+:iconthe-adopt-factory:    :iconthe-adoption-agency:    :icontheadoptablemarket:    :icontheadoptionplace:    :icontorkana-adopts:    
+:iconultimateadopts:    :iconunderlandadopts:    :iconunknown-adopt-makers:    :iconviokatysseadopts:    :iconwanna-adopt:    
+:iconwelcomedadoptables:    :iconworld-of-adopts:    :iconworldofadoptables:    :iconworldwideadopts:    :iconworth-it-adoptables:    
+:iconwoven-darkness-adopt:    :iconzee-adopts:    
 
 
-
-http://adoptapedia.deviantart.com/journal/Directory-Species-Specific-Groups-356537298
-:iconall: :devall:
-:iconnyamrianworkshop: :devnyamrianworkshop:
-:iconskellkninesanctuary: :devskellkninesanctuary:
-:icontestgroup1: :devtestgroup1:
-:icontestgroup2: :devtestgroup2:
-
-
-
-http://adoptapedia.deviantart.com/journal/Directory-Fandom-Specific-356537323
-:iconall: :devall:
-:iconprittylittleponies: :devprittylittleponies:
-:icontestgroup1: :devtestgroup1:
-:icontestgroup2: :devtestgroup2:
-:icontestgroup5: :devtestgroup5:
+===SPECIES SPECIFIC============================================================
+:iconadopt-canines:    :iconadopt-human:    :iconadopt-me-a-furrie:    :iconadoptacanine:    :iconadoptananimal:    
+:iconadult-adopts:    :iconanimal-adopt:    :iconanimal-adopties:    :iconanimaladoptionagency:    :iconanimalsforadoption:    
+:iconbipedal-adopts:    :iconcanidadoptandtemps:    :iconchibiadopts:    :iconcreature---adopts:    :iconcutefelineadopts:    
+:iconda-adoption-kennels:    :icondonutdogs:    :iconfantasyadopts1:    :iconfemale-adopties:    :iconfreehorseaoptables:    
+:iconfursona-home:    :iconfuzzballs-for-points:    :iconhamaside:    :iconhorrorfactoryadopts:    :iconhumanadoptsonly:    
+:iconhumanized-adoptables:    :iconhumankemonoadopts:    :iconhumanoid-adopts:    :iconhumanoidadopts:    :iconkemonomimi-adopts:    
+:iconlegit-breedables:    :iconlion-adopters:    :iconmysteryadoptcentre:    :iconnyamrianworkshop:    :icono-creature-adopts:    
+:iconskellkninesanctuary:    :iconthe-wolf-pound:    :iconunhuman-adopts:    :iconwolf-a-meow-adopts:    
 
 
-
-http://adoptapedia.deviantart.com/journal/Directory-Payment-Specific-356537341
-:iconall: :devall:
-:icontestgroup2: :devtestgroup2:
-
-
-
-http://adoptapedia.deviantart.com/journal/Directory-Groups-with-a-Quality-Filter-357048896
-:iconall: :devall:
-:icontestgroup2: :devtestgroup2:
-
-
-
-http://adoptapedia.deviantart.com/journal/Directory-Groups-for-Adoptable-Bases-363401103
-:iconall: :devall:
-:icontestgroup1: :devtestgroup1:
-:icontestgroup2: :devtestgroup2:
+===CLOSED SPECIES==============================================================
+:iconacerbeonis:    :iconadopt-a-pearl:    :iconaquaripuffs:    :iconbeeimps:    :iconboople-snoots:    
+:iconbutton-buds:    :iconceileo-species-hq:    :iconcelestialfeathers:    :iconchompets:    :iconcosmic-bears:    
+:iconcrackhound-penal:    :icondaemon-domain:    :icondark-volgan-skies:    :icondickle-fanclub:    :icondumpling-dragons:    
+:iconelementailclans:    :iconeleux:    :iconfeathersuneheights:    :iconfishpuff-pond:    :icongalastruck:    
+:iconglass-bellies:    :iconglasstum-garden:    :iconhexacrura-offical:    :iconhouse-of-fruit:    :iconhycis-species:    
+:iconid-empire:    :iconimpacha-lair:    :iconkoimes:    :iconksyder-closedspecies:    :iconlampdragoncave:    
+:iconlana-dragons:    :iconlavaes-world:    :iconleemaspecies:    :iconmagical-tcmb:    :iconmalukiri-den:    
+:iconmantipurrfect:    :iconmasquelin-clutch:    :iconmelodidogs:    :iconmisty-kingdoms:    :iconmonster-bat-junction:    
+:iconowletspecies:    :iconpaum-paradise:    :iconpawm-phanatics:    :iconpon-e-qons:    :iconquarrycreature:    
+:iconrenosisaurus:    :iconrumianekdogs:    :iconshardwing-species:    :iconshtspecies:    :iconsliclop:    
+:iconsodaren-town:    :iconspacialdescendants:    :iconsquibtank:    :iconteacup-foxes:    :iconthe-bagpack-cubby:    
+:iconthe-mais-pond:    :iconthe-ninfu-species:    :iconthe-sugarfactory:    :icontheshallowsspecies:    :icontreatpups:    
+:icontree-of-life-adopts:    :iconvermil-upus:    :iconworldofquuel:    :iconzyrrix:    
 
 
+===FANDOM SPECIFIC=============================================================
+:iconadopt-a-fantroll:    :iconadopt-a-pony:    :iconadoptasonic:    :iconcheap-sonic-adopts:    :iconmlpadoptionismagic:    
+:iconmlpadopts:    :iconmy-little-adoptables:    :iconmylittleadoptable:    :iconmylittlepony-adopt:    :iconpon-e-qons:    
+:iconponies-need-homes:    :iconpony-adoptables:    :iconprittylittleponies:    :iconsailor-u:    :iconsonic--adopts:    
+:iconsonic-adoptionagency:    :iconsonic-adopts:    :iconsonicadoopts:    :iconsonicadoptables:    :iconsonicadoptablesfree:    
+:iconsonicadoptablesgroup:    :iconsonicadoptorphanage:    :iconsweetponyadopt:    :iconxxfan-adoptsxx:    
 
-http://adoptapedia.deviantart.com/journal/Directory-Adoption-Agencies-393666841
-:iconall: :devall:
-:icontestgroup2: :devtestgroup2:
+
+===PAYMENT SPECIFIC============================================================
+:iconadoptables-4-points:    :iconadopts-for-less:    :iconall-point-adoptables:    :iconauction-adoptables:    :iconauctionadopts:    
+:iconcheap-adopts:    :iconcheapadopts-commish:    :iconfree-adopts-only:    :iconfreedreamselfyadopts:    :iconno-auction-adopts:    
+:iconpaypal-adopts:    :iconpaypaladoptioncenter:    :iconpoint-adoptables:    :iconpoint-adopties:    :iconpoint-adopts:    
+:iconpoint-free-adopts:    :iconpointables:    :iconpointcritters:    :iconpointlove:    :iconpoints-for-adptable:    
+:iconptsforadopt:    
+
+
+===QUALITY SPECIFIC============================================================
+:iconadopts-symphony:    :iconcustomadopts:    :iconeffort-adoptables:    :iconelite-adoptables:    :iconhand-drawn-adopts:    
+:iconhard-work-adopts:    :iconhigh-class-adopts:    :iconhigh-quality-adopts:    :iconhqadopts:    :iconpoint-adopts:    
+:iconpolished-adopts:    :iconpro-adopt:    :iconquality-adoptables:    :iconquality-adopts:    :iconspellboundrealms:    
+:iconworth-it-adoptables:    
+
+
+===ADOPTABLE AGENCIES==========================================================
+:iconauresearch:    :iconawoken-shiryte:    :iconcanvas-cuties:    :iconcardtamers:    :iconcygnia:    
+:iconderptastical:    :icondreamtones:    :iconelementiiae:    :iconflufferbuns:    :icongryalic:    
+:iconior-adoptables:    :iconkirikitties:    :iconlnnovation:    :iconmcadoptables:    :iconpikumon:    
+:iconplatefighters:    :iconpyrogi-adoptables:    :iconraindropcafe:    :iconshinshiadoptables:    :iconspace-elements:    
+:iconstarburstadoptables:    :iconsummers-garden:    :iconworldofquuel:    
+
+
+===MISCELLANEOUS SPECIFIC======================================================
+:iconadopt-bases:    :iconadoptable-bases:    :iconany-species-breeders:    :iconbases-for-adopts:    :iconclothingadopts:    
+:icondna-breeds-adopts:    :iconforever-boutique:    :iconhatchables:    :iconmystery-adopts:    :iconoc-tailor:    

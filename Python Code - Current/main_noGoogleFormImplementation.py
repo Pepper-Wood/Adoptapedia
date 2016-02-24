@@ -34,20 +34,22 @@ class GROUP:
 		
 		# converting long phrases for categories into abbreviations
 		for i in range(0, len(self.categories)):
-			if self.categories[i] == "Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]" or self.categories[i] == " Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]":
+			if self.categories[i] == "Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]" or self.categories[i] == " Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]" or self.categories[i] == "1":
 				self.categories[i] = 'all'
-			elif self.categories[i] == "Species-specific" or self.categories[i] == " Species-specific":
+			elif self.categories[i] == "Species-specific" or self.categories[i] == " Species-specific" or self.categories[i] == "2":
 				self.categories[i] = 'species'
-			elif self.categories[i] == "Fandom-specific" or self.categories[i] == " Fandom-specific":
+			elif self.categories[i] == "Fandom-specific" or self.categories[i] == " Fandom-specific" or self.categories[i] == "3":
 				self.categories[i] = 'fandom'
-			elif self.categories[i] == "Payment-specific (i.e. free adopts only; point adopts only; etc.)" or self.categories[i] == " Payment-specific (i.e. free adopts only; point adopts only; etc.)":
+			elif self.categories[i] == "Payment-specific (i.e. free adopts only; point adopts only; etc.)" or self.categories[i] == " Payment-specific (i.e. free adopts only; point adopts only; etc.)" or self.categories[i] == "4":
 				self.categories[i] = 'payment'
-			elif self.categories[i] == "Quality-Control group (i.e. filters deviations based on a set of artistic criteria)" or self.categories[i] == " Quality-Control group (i.e. filters deviations based on a set of artistic criteria)":
+			elif self.categories[i] == "Quality-Control group (i.e. filters deviations based on a set of artistic criteria)" or self.categories[i] == " Quality-Control group (i.e. filters deviations based on a set of artistic criteria)" or self.categories[i] == "5":
 				self.categories[i] = 'quality'
-			elif self.categories[i] == "Adoptable Base Group" or self.categories[i] == " Adoptable Base Group":
-				self.categories[i] = 'base'
-			elif self.categories[i] == "Adoption Agencies (typically an RP group where adopts can be purchased with in-world currency)" or self.categories[i] == " Adoption Agencies (typically an RP group where adopts can be purchased with in-world currency)":
+			elif self.categories[i] == "Adoptable Base Group" or self.categories[i] == " Adoptable Base Group" or self.categories[i] == "6" or self.categories[i] == "Miscellaneous (adoptable bases, outfit adopts, hatchables, other)" or self.categories[i] == " Miscellaneous (adoptable bases, outfit adopts, hatchables, other)":
+				self.categories[i] = 'misc'
+			elif self.categories[i] == "Adoption Agencies (typically an RP group where adopts can be purchased with in-world currency)" or self.categories[i] == " Adoption Agencies (typically an RP group where adopts can be purchased with in-world currency)" or self.categories[i] == "7":
 				self.categories[i] = 'agency'
+			elif self.categories[i] == "Closed Species Group (don't select Species-Specific if you choose this option)" or self.categories[i] == " Closed Species Group (don't select Species-Specific if you choose this option)" or self.categories[i] == "8":
+				self.categories[i] = 'closed'
 	
 	def addCategory(self, value):
 		# value is a string
@@ -149,6 +151,7 @@ def write_to_output_file(group_dict):
 	output.write(str(len(group_dict)) + "\n\n")
 	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-List-of-All-Registered-Groups-357048592\n")
 	NUM_PER_ROW = 5
+	NUM_PER_JOURNAL = 200
 	counting = 0
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
 		counting += 1
@@ -156,6 +159,9 @@ def write_to_output_file(group_dict):
 		output.write("    ".rstrip("\n"))
 		if counting % NUM_PER_ROW == 0:
 			output.write("\n")
+		if counting % NUM_PER_JOURNAL == 0:
+			output.write("\n\n")
+		
 	counting = 0
 	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-All-Adopts-Accepted-Groups-356536839\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
@@ -166,7 +172,7 @@ def write_to_output_file(group_dict):
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Species-Specific-Groups-356537298\n")
+	output.write("\n\n\n===SPECIES SPECIFIC============================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
 		if 'species' in group.categories:
 			counting += 1
@@ -175,7 +181,16 @@ def write_to_output_file(group_dict):
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Fandom-Specific-356537323\n")
+	output.write("\n\n\n===CLOSED SPECIES==============================================================\n")
+	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
+		if 'closed' in group.categories:
+			counting += 1
+			output.write(group.print4journals().rstrip('\n'))
+			output.write("    ".rstrip("\n"))
+			if counting % NUM_PER_ROW == 0:
+				output.write("\n")
+	counting = 0
+	output.write("\n\n\n===FANDOM SPECIFIC=============================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
 		if 'fandom' in group.categories:
 			counting += 1
@@ -184,7 +199,7 @@ def write_to_output_file(group_dict):
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Payment-Specific-356537341\n")
+	output.write("\n\n\n===PAYMENT SPECIFIC============================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
 		if 'payment' in group.categories:
 			counting += 1
@@ -193,7 +208,7 @@ def write_to_output_file(group_dict):
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Groups-with-a-Quality-Filter-357048896\n")
+	output.write("\n\n\n===QUALITY SPECIFIC============================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
 		if 'quality' in group.categories:
 			counting += 1
@@ -202,18 +217,18 @@ def write_to_output_file(group_dict):
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Groups-for-Adoptable-Bases-363401103\n")
+	output.write("\n\n\n===ADOPTABLE AGENCIES==========================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
-		if 'base' in group.categories:
+		if 'agency' in group.categories:
 			counting += 1
 			output.write(group.print4journals().rstrip('\n'))
 			output.write("    ".rstrip("\n"))
 			if counting % NUM_PER_ROW == 0:
 				output.write("\n")
 	counting = 0
-	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-Adoption-Agencies-393666841\n")
+	output.write("\n\n\n===MISCELLANEOUS SPECIFIC======================================================\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
-		if 'agency' in group.categories:
+		if 'misc' in group.categories:
 			counting += 1
 			output.write(group.print4journals().rstrip('\n'))
 			output.write("    ".rstrip("\n"))
@@ -225,48 +240,44 @@ def write_to_output_file(group_dict):
 if __name__ == "__main__":
 	print "Starting up...."
 	
-	do_you_want_to_read_spreadsheets = "no"
-	
 	group_dict = {}
-	if do_you_want_to_read_spreadsheets == "yes":
-		# opening requirements for reading google spreadsheets
-		json_key = json.load(open('Adoptapedia-e21925578ef0.json'))
-		scope = ['https://spreadsheets.google.com/feeds']
-		credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'].encode(), scope)
-		gc = gspread.authorize(credentials)
-
-		print "Checking for spreadsheet....\n"
-		sh = gc.open("Adding a Group Form (Responses)") # open a spreadsheet
-		fr = sh.get_worksheet(0) # this is the form responses specifically
-		form_responses0 = fr.get_all_values()
-		cd = sh.get_worksheet(1) # this is the spreadsheet for current groups
-		current_directory0 = cd.get_all_values()
-		
-		convert_spreadsheet_info(form_responses0, group_dict, True)
-		convert_spreadsheet_info(current_directory0, group_dict, False)
-	
-	
 	convert_cd_file_with_spreadsheet_info(group_dict)
-		
-	print "Erasing defunct groups....\n"
-	remove_groups(group_dict)
+	
+	
+	DELETE_FLAG = raw_input("Do you want to delete any groups? (y/n):   ",)
+	while DELETE_FLAG == "y":
+		group_to_remove = raw_input("Group Name:   ",)
+		group_to_remove = group_to_remove.lower()
+		if group_dict.has_key((group_to_remove.lower())): # entry is already included
+			del group_dict[(group_to_remove.lower())]
+		DELETE_FLAG = raw_input("Continue? (y/n)   ",)
 
+	print "-------------------------------------------"
+	ADD_FLAG = raw_input("Do you want to add any groups? (y/n)   ",)
+	if ADD_FLAG == "y":
+		p = subprocess.Popen(["notepad.exe", "category_nums.txt"])
+	while ADD_FLAG == "y":
+		add_group_var = raw_input("Group Name:   ",)
+		add_group_var = add_group_var.lower()
+		categories_for_add_group = raw_input("Categories:   ",)
+		categories_for_add_group = categories_for_add_group.split(" ")
+		
+		if group_dict.has_key(add_group_var): # entry is already included
+			new_group = GROUP(add_group_var, categories_for_add_group)
+			group_dict[add_group_var].merge_groups(new_group)
+		else:
+			group_dict[add_group_var] = GROUP(add_group_var, categories_for_add_group)
+		
+		ADD_FLAG = raw_input("Continue? (y/n)   ",)
+		
+	
+	print "Saving to cd_file.txt....\n"
+	write_to_cd_file(group_dict)
 	print "Writing to output.txt....\n"
 	write_to_output_file(group_dict)
 	
-	# this will be defunct and marked by a flag, as writing to a google spreadsheet
-	# takes forever as opposed to writing to a text file
-	spreadsheet_flag2 = False
-	if spreadsheet_flag2:
-		print "Writing to spreadsheet....\n"
-		write_to_spreadsheet(group_dict)
-	else:
-		print "Writing to text file....\n"
-		write_to_cd_file(group_dict)
-			
-	if do_you_want_to_read_spreadsheets == "yes":
-		print "\nErasing spreadsheet....\n"
-		erase_spreadsheet(fr)
+	
+	
 	print "Done!" # the program then opens up the output.txt file in notepad
 	p = subprocess.Popen(["notepad.exe", "output.txt"])
 	p = subprocess.Popen(["notepad.exe", "delete.txt"])
