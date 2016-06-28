@@ -60,7 +60,6 @@ adoptable-boutique all
 adoptable-carnival quality
 adoptable-city all
 adoptable-core all
-adoptable-corner all
 adoptable-creatures misc
 adoptable-delights quality
 adoptable-den all
@@ -269,7 +268,6 @@ carbon-adopt-agency all
 cardtamers agency
 catubbles-species closed
 ceileo-species-hq closed
-celestialfeathers closed
 center-of-adoption all
 characteradopters all
 cheap-adopts payment
@@ -396,7 +394,6 @@ favorpoint all
 featharia closed
 feathersuneheights closed
 female-adopties species
-fishpuff-pond closed
 flarune closed
 florichor-garden closed
 flowercage-meadow closed
@@ -449,7 +446,6 @@ heaven-online misc
 heavynsadoptionhome all
 hellasite-town closed
 helmi-dogs closed
-hexacrura-offical closed
 hexpire-haven closed
 heylookandadoptgroup all
 high-class-adopts quality
@@ -510,7 +506,6 @@ krystalias-adopts all
 ksyder-closedspecies closed
 lais-orphanage all
 lampdragoncave closed
-lana-dragons closed
 landofadopts all
 lavaes-world closed
 leafy-adopts all
@@ -687,7 +682,6 @@ rainbow-adoptables all
 raindropcafe agency
 rays-one-stop-adopt all
 remis-species closed
-renosisaurus closed
 rensadoptablesgroup all
 rescue-adoptables all
 ribbonwolves closed
@@ -791,7 +785,6 @@ theadoptionplace all
 thecommissioncatalog payment misc
 thegreaterplace closed
 themedadoptables all
-theshallowsspecies closed
 thesnaptrap closed
 theuniverseponies closed
 time-to-adopt all
