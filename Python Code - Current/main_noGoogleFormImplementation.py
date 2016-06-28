@@ -18,10 +18,12 @@
 #  the end of every day or so.
 
 import json
-import gspread
-from oauth2client.client import SignedJwtAssertionCredentials
+#import gspread
+#from oauth2client.client import SignedJwtAssertionCredentials
 import operator
 import subprocess
+import urllib2
+import re
 
 # -----------------------------------------------------------
 class GROUP:
@@ -35,7 +37,7 @@ class GROUP:
 		# converting long phrases for categories into abbreviations
 		for i in range(0, len(self.categories)):
 			if self.categories[i] == "Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]" or self.categories[i] == " Accepts all adopt deviations without restrictions [Don't select anything else if you check this box]" or self.categories[i] == "1":
-				self.categories[i] = 'all'
+				self.categories[i] = 'all-adopts-accepted'
 			elif self.categories[i] == "Species-specific" or self.categories[i] == " Species-specific" or self.categories[i] == "2":
 				self.categories[i] = 'species'
 			elif self.categories[i] == "Fandom-specific" or self.categories[i] == " Fandom-specific" or self.categories[i] == "3":
@@ -146,6 +148,32 @@ def write_to_cd_file(group_dict):
 	cd_file.close()
 
 # -----------------------------------------------------------
+def returnGroupIcon(url2):
+        try:
+                url = "http://www." + url2 + ".deviantart.com"
+                sock = urllib2.urlopen(url)
+        except urllib2.HTTPError, e:
+                print "\n" + url2 + " needs to be deleted"
+                return ""
+        else:
+                data = sock.read()
+                result = re.search('<link href=(.*) rel="image_src">', data)
+                if result.group(1) == '"http://a.deviantart.net/avatars/default.gif"':
+                        return '"http://a.deviantart.net/avatars/default_group.gif"'
+                else:
+                        return result.group(1)
+
+# -----------------------------------------------------------
+def write_to_html(group_dict):
+        html_table = open("html_table.txt", 'w')
+        counter = 0
+        for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
+                html_table.write('\t\t<li><a target="_blank" href="http://www.' + str(group.name) + '.deviantart.com" class="' + str((' '.join(group.categories))) + '"><img src=' + returnGroupIcon(str(group.name)) + '/></a></li>\n')
+                counter += 1
+                print counter,
+        html_table.close()
+
+# -----------------------------------------------------------
 def write_to_output_file(group_dict):
 	output = open("output.txt", 'w')
 	output.write(str(len(group_dict)) + "\n\n")
@@ -165,7 +193,7 @@ def write_to_output_file(group_dict):
 	counting = 0
 	output.write("\n\n\nhttp://adoptapedia.deviantart.com/journal/Directory-All-Adopts-Accepted-Groups-356536839\n")
 	for group in (sorted(group_dict.values(), key=operator.attrgetter('name'))):
-		if 'all' in group.categories:
+		if 'all-adopts-accepted' in group.categories:
 			counting += 1
 			output.write(group.print4journals().rstrip('\n'))
 			output.write("    ".rstrip("\n"))
@@ -271,9 +299,11 @@ if __name__ == "__main__":
 		ADD_FLAG = raw_input("Continue? (y/n)   ",)
 		
 	
-	print "Saving to cd_file.txt....\n"
+	print "Saving to cd_file.txt...."
 	write_to_cd_file(group_dict)
-	print "Writing to output.txt....\n"
+	print "Writing to html_table.txt...."
+	write_to_html(group_dict)
+	print "Writing to output.txt...."
 	write_to_output_file(group_dict)
 	
 	
@@ -281,6 +311,7 @@ if __name__ == "__main__":
 	print "Done!" # the program then opens up the output.txt file in notepad
 	p = subprocess.Popen(["notepad.exe", "output.txt"])
 	p = subprocess.Popen(["notepad.exe", "delete.txt"])
+	p = subprocess.Popen(["notepad.exe", "html_table.txt"])
 	p = subprocess.Popen(["notepad.exe", "cd_file.txt"])
 	
 	

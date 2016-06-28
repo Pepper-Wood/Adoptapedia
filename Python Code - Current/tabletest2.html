@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="web design, website development, web application development, print design, database development, ecommerce websites, search engine optimization, packaging design" />
+<meta name="description" content="Tutorial demo showing how to add jquery animated validation to any form" />
+<meta name="robots" content="all" />
+<title>jQuery Tutorial Demo - Create An Automatic Content Filter Using CSS Classes</title>
+<link rel="stylesheet" type="text/css" href="tables.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/JavaScript">
+$(document).ready(function() {
+	/*
+	// map the classes for each item into a new array
+	classes = $("#demo-list li a").map(function(){
+		return $(this).attr("class").split(' ');
+    });
+	
+	// create list of distinct items only
+	var classList = distinctList(classes);
+	
+	// generate the list of filter links
+	var tagList = '<ul id="tag-list"></ul>';
+	tagItem = '<li><a href="#" class="active">all</a></li>';
+	$.each(classList, function(index,value){
+		if (value === "all-adopts-accepted") {
+			var value = "adopt groups with no restrictions";
+		} else if (value === "closed") {
+			var value = "closed species groups";
+		} else if (value === "fandom") {
+			var value = "fandom-specific adopt groups";
+		} else if (value === "misc") {
+			var value = "miscellaneous adopt groups";
+		} else if (value === "species") {
+			var value = "species-specific adopt groups";
+		} else if (value === "payment") {
+			var value = "payment-specific adopt groups";
+		} else if (value === "quality") {
+			var value = "quality-restricted adopt groups";
+		} else if (value === "agency") {
+			var value = "adoptable agencies";
+		}
+		tagItem += '<li><a href="#">'+value+'</a></li>';
+	});
+	*/
+	
+	// add the filter links before the list of items
+	$("#demo-list").before($(tagList).append(tagItem));
+	
+	// filter the demo list when the filter links are clicked
+	$('#tag-list li a').on('click',function(e){
+
+		var getText = $(this).text();
+		$('.testing').text(getText);
+		if (getText === "adopt groups with no restrictions") {
+			var getText = "all-adopts-accepted";
+		} else if (getText === "closed species groups") {
+			var getText = "closed";
+		} else if (getText === "fandom-specific adopt groups") {
+			var getText = "fandom";
+		} else if (getText === "miscellaneous adopt groups") {
+			var getText = "misc";
+		} else if (getText === "species-specific adopt groups") {
+			var getText = "species";
+		} else if (getText === "payment-specific adopt groups") {
+			var getText = "payment";
+		} else if (getText === "quality-restricted adopt groups") {
+			var getText = "quality";
+		} else if (getText === "adoptable agencies") {
+			var getText = "agency";
+		}
+		
+		if(getText == 'all'){
+			$("#demo-list li a").slideDown();
+		} else {
+			$("#demo-list li a").fadeOut();
+			$("#demo-list li a."+getText).fadeIn();
+		}
+		
+		// add class "active" to current filter item
+		$('#tag-list li a').removeClass('active');
+		$(this).addClass('active');
+		
+		// prevent the page scrolling to the top of the screen
+		e.preventDefault();
+		
+	});		
+});
+// Function to create a distinct list from array
+function distinctList(inputArray){
+	var i;
+	var length = inputArray.length;
+	var outputArray = [];
+	var temp = {};
+	for (i = 0; i < length; i++) {
+		temp[inputArray[i]] = 0;
+    }
+    for (i in temp) {
+        outputArray.push(i);
+	}
+	return outputArray;
+}
+</script>
+</head>
+<body>
+<ul id="tag-list">
+	<li><a href="#" class="active">all</a></li>
+	<li><a href="#">adopt groups with no restrictions</a></li>
+	<li><a href="#">closed species groups</a></li>
+	<li><a href="#">fandom-specific adopt groups</a></li>
+	<li><a href="#">miscellaneous adopt groups</a></li>
+	<li><a href="#">species-specific adopt groups</a></li>
+	<li><a href="#">payment-specific adopt groups</a></li>
+	<li><a href="#">quality-restricted adopt groups</a></li>
+	<li><a href="#">adoptable agencies</a></li>
+</ul>
+
+<p class="testing">none</p>
+
+<div class="wrap">
+  <h2 class="text-center"></h2>
+	<ul id="demo-list">
+		<!-- PASTE THE GROUP INFORMATION HERE -->
+		<li><a target="_blank" href="http://www.1all-adopts1.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/1/a/1all-adopts1.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.4d0p74bl35.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/4/d/4d0p74bl35.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.absolutely-adopt-us.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/b/absolutely-adopt-us.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.acerbeonis.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/a/c/acerbeonis.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.admirableadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/admirableadoptables.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-blessing.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-blessing.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-cutie.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-cutie.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-fantroll.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-fantroll.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-fursona.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-fursona.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-oc.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-oc.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-pearl.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-pearl.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-a-pony.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-pony.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-agency.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-agency.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-an-adoptable.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-an-adoptable.jpg?12"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-an-oc-here.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-an-oc-here.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-awesomely.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-awesomely.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-bases.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/a/d/adopt-bases.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-canines.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adopt-canines.png?6"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-human.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adopt-human.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-me-a-furrie.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adopt-me-a-furrie.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-me-plz.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-me-plz.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-oasis.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-oasis.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-plaza.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-plaza.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-sugar.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-sugar.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-supermarket.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-supermarket.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-to-ya-drop.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-to-ya-drop.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopt-world-around.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopt-world-around.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptababes.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptababes.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-babies.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-babies.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-bases.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/a/d/adoptable-bases.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-be-mine.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-boutique.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-boutique.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-center.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-center.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-city.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-city.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-den.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-den.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-network.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-network.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-ocs.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-ocs.jpg?7"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-orphanage.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-orphanage.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-overstock.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-overstock.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-park.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-park.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-planet.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-planet.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-tearoom.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-tearoom.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptable-utopia.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptable-utopia.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablehub.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablehub.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptableisland.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptableisland.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablelovers.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablelovers.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablemarketplace.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablemarketplace.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-4-points.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/a/d/adoptables-4-points.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-adopt.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-and-all.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-and-all.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-around.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-around.gif?11"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-colors.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-colors.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-for-fun.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-for-fun.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-for-sale.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-for-sale.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-forever.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-forever.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-frenzy.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-frenzy.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables-land.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables-land.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptables2love.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptables2love.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablesandthings.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablesandthings.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoptableseverywhere.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptableseverywhere.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablesforanyone.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablesforanyone.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptableshamlet.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptableshamlet.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptableshaven.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptableshaven.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptableshrine.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptableshrine.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablesparadise.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablesparadise.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptablesunlimited.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptablesunlimited.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptacanine.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adoptacanine.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptadorables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptadorables.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptalongwithme.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptalongwithme.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptananimal.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adoptananimal.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptasonic.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/a/d/adoptasonic.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptcafe.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptcafe.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptclub.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptclub.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptia.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptia.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoption--center.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption--center.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-city.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption-city.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-concoctions.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption-concoctions.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-link.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption-link.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-mania.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption-mania.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-planet.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoption-planet.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoption-team-sales.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.adoptionagents.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptionagents.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptionclub.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptionclub.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptionhouse.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptionhouse.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptionparty.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptionparty.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptions-galore.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptions-galore.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptions-guild.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptions-guild.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptionuniverse.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptionuniverse.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptmachine.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptmachine.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptme-plz.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptme-plz.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptohobia.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptohobia.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-4-love.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopts-4-love.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-4-sale.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopts-4-sale.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-are-our-lives.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopts-are-our-lives.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-for-less.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/a/d/adopts-for-less.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-symphony.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/a/d/adopts-symphony.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopts-yo.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopts-yo.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopts4us.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopts4us.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptscafe.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptscafe.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adoptsforthewin.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptsforthewin.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptsoverload.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptsoverload.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptsshelter.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptsshelter.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adoptsshop.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptsshop.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoptsworld.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptsworld.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.adopttoday.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adopttoday.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adoptz.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoptz.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.adorableadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adorableadopts.png?9"/></a</li>
+		<li><a target="_blank" href="http://www.adorbsadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adorbsadopts.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.adoreandadopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adoreandadopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.adotables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/d/adotables.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.adult-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/d/adult-adopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.aerodilsadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/e/aerodilsadoptables.png?11"/></a</li>
+		<li><a target="_blank" href="http://www.agency-of-adoption.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/g/agency-of-adoption.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.ah-orphanage.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.all--adoptswelcome.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/all--adoptswelcome.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.all-4-all.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/all-4-all.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.all-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/all-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.all-adopts-accepted.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/all-adopts-accepted.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.all-adoptsaccepted.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/all-adoptsaccepted.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.all-point-adoptables.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/a/l/all-point-adoptables.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.alladoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/alladoptables.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.allocadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/allocadopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.allthecuteadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/allthecuteadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.allyouradopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/allyouradopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.always-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/l/always-adopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.amazing-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/m/amazing-adopts.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.amazingly-adoptable.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/m/amazingly-adoptable.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.among-the-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/m/among-the-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.animal-adopt.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/n/animal-adopt.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.animal-adopties.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/n/animal-adopties.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.animaladoptionagency.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/a/n/animaladoptionagency.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.animalsforadoption.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.animeadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/animeadoptables.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.any-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/any-adoptables.png?10"/></a</li>
+		<li><a target="_blank" href="http://www.any-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/any-adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.any-species-breeders.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/a/n/any-species-breeders.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.anyadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/anyadoptables.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.anyadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/anyadopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.anyadoptscentral.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/anyadoptscentral.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.anyandalladopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/anyandalladopts.jpg?3"/></a</li>
+		<li><a target="_blank" href="http://www.anything-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/n/anything-adopts.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.aquaripuffs.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/a/q/aquaripuffs.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.ari-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/r/ari-adopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.arty-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/r/arty-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.auction-adoptables.deviantart.com" class="all-adopts-accepted payment"><img src="http://a.deviantart.net/avatars/a/u/auction-adoptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.auctionadopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/a/u/auctionadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.august-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/u/august-adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.auresearch.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/a/u/auresearch.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.awesome-adopt-club.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/w/awesome-adopt-club.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.awesomeadoptsclub.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/a/w/awesomeadoptsclub.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.awoken-shiryte.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/a/w/awoken-shiryte.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.baelon-realms-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/b/a/baelon-realms-adopts.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.bases-for-adopts.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/b/a/bases-for-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.beeimps.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/b/e/beeimps.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.bipedal-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/b/i/bipedal-adopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.boople-snoots.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/b/o/boople-snoots.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.breed-and-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/b/r/breed-and-adopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.breed-n-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/b/r/breed-n-adopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.bright-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/b/r/bright-adopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.button-buds.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/b/u/button-buds.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.canidadoptandtemps.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/c/a/canidadoptandtemps.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.canvas-cuties.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/c/a/canvas-cuties.png?6"/></a</li>
+		<li><a target="_blank" href="http://www.cardtamers.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/c/a/cardtamers.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.ceileo-species-hq.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/c/e/ceileo-species-hq.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.center-of-adoption.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/e/center-of-adoption.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.cheap-adopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/c/h/cheap-adopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.cheap-sonic-adopts.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.cheapadopts-commish.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/c/h/cheapadopts-commish.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.checksadopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/h/checksadopt.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.chibiadopts.deviantart.com" class="all-adopts-accepted species"><img src="http://a.deviantart.net/avatars/c/h/chibiadopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.chompets.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/c/h/chompets.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.clothingadopts.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/c/l/clothingadopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.club-valizan.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/l/club-valizan.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.colorful-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/o/colorful-adoptables.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.cosmic-bears.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/c/o/cosmic-bears.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.crackhound-penal.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.crazedadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/r/crazedadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.crazy-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/r/crazy-adopts.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.creation-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/r/creation-adopts.png?7"/></a</li>
+		<li><a target="_blank" href="http://www.creature---adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/c/r/creature---adopts.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.creature-crafters.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.creepyandcute-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/r/creepyandcute-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.customadopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/c/u/customadopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.cute-ad0ptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/u/cute-ad0ptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.cute-adoptables-here.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/u/cute-adoptables-here.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.cuteadopties.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/u/cuteadopties.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.cutecheappointadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/u/cutecheappointadopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.cutefelineadopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/c/u/cutefelineadopts.jpg?4"/></a</li>
+		<li><a target="_blank" href="http://www.cutest-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/c/u/cutest-adoptables.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.cygnia.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/c/y/cygnia.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.da-adoption-kennels.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/d/a/da-adoption-kennels.gif?6"/></a</li>
+		<li><a target="_blank" href="http://www.da-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/da-adopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.da-fleamarket.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/da-fleamarket.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.daadoptablecentral.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/daadoptablecentral.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.dadoptable.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/dadoptable.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.dadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/dadopts.jpg?3"/></a</li>
+		<li><a target="_blank" href="http://www.daemon-domain.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/d/a/daemon-domain.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.daily-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/a/daily-adoptables.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.delightful-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/e/delightful-adopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.derptastical.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/d/e/derptastical.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.designsellers.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/e/designsellers.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.designtown.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/e/designtown.png?7"/></a</li>
+		<li><a target="_blank" href="http://www.deviant-in-need.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.dna-breeds-adopts.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/d/n/dna-breeds-adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.doadopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/o/doadopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.donutdogs.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/d/o/donutdogs.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.draw-to-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/r/draw-to-adopt.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.dreamer-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/r/dreamer-adopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.dreamtones.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.dripdropadoptgroup.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/d/r/dripdropadoptgroup.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.dumpling-dragons.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/d/u/dumpling-dragons.gif?8"/></a</li>
+		<li><a target="_blank" href="http://www.echos-adopts-group.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/c/echos-adopts-group.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.effort-adoptables.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/e/f/effort-adoptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.elementailclans.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/e/l/elementailclans.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.elementiiae.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/e/l/elementiiae.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.eleux.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.elite-adoptables.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/e/l/elite-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.ello-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/l/ello-adopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.enchantingadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/n/enchantingadopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.epical-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/p/epical-adoptables.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.everyadoptable.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/v/everyadoptable.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.everythingadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/e/v/everythingadopts.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.fantasyadoptbabes.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/f/a/fantasyadoptbabes.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.fantasyadopts1.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/f/a/fantasyadopts1.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.feathersuneheights.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/f/e/feathersuneheights.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.female-adopties.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/f/e/female-adopties.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.flufferbuns.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/f/l/flufferbuns.gif?8"/></a</li>
+		<li><a target="_blank" href="http://www.forever--adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/f/o/forever--adopts.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.forever-adoptin.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/f/o/forever-adoptin.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.forever-boutique.deviantart.com" class="all-adopts-accepted misc"><img src="http://a.deviantart.net/avatars/f/o/forever-boutique.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.fortheloveofadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/f/o/fortheloveofadopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.free-adopts-only.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/f/r/free-adopts-only.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.freedreamselfyadopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/f/r/freedreamselfyadopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.freehorseaoptables.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.fursona-home.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/f/u/fursona-home.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.fuzzballs-for-points.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/f/u/fuzzballs-for-points.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.galastruck.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/g/a/galastruck.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.get-a-furry.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/g/e/get-a-furry.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.glass-bellies.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/g/l/glass-bellies.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.glasstum-garden.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/g/l/glasstum-garden.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.golds-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/g/o/golds-adoptables.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.gos-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/g/o/gos-adoptables.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.gryalic.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/g/r/gryalic.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.hand-drawn-adopts.deviantart.com" class="all-adopts-accepted quality"><img src="http://a.deviantart.net/avatars/h/a/hand-drawn-adopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.hard-work-adopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/h/a/hard-work-adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.hatchables.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/h/a/hatchables.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.heavynsadoptionhome.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/e/heavynsadoptionhome.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.heylookandadoptgroup.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/e/heylookandadoptgroup.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.high-class-adopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.high-quality-adopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/h/i/high-quality-adopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.home-for-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/o/home-for-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.home-of-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/o/home-of-adoptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.homelessadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/o/homelessadopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.horrorfactoryadopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/o/horrorfactoryadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.hot-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/o/hot-adopts.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.hot-adoptz.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/h/o/hot-adoptz.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.house-of-fruit.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/h/o/house-of-fruit.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.hqadopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/h/q/hqadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.humanadoptsonly.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/u/humanadoptsonly.jpg?3"/></a</li>
+		<li><a target="_blank" href="http://www.humanized-adoptables.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/u/humanized-adoptables.gif?14"/></a</li>
+		<li><a target="_blank" href="http://www.humankemonoadopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/u/humankemonoadopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.humanoid-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/u/humanoid-adopts.gif?8"/></a</li>
+		<li><a target="_blank" href="http://www.humanoidadopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/h/u/humanoidadopts.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.hycis-species.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.id-empire.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/i/d/id-empire.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.impacha-lair.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/i/m/impacha-lair.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.inksplash-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/i/n/inksplash-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.insane--adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/i/n/insane--adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.insane-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/i/n/insane-adoptables.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.ior-adoptables.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/i/o/ior-adoptables.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.jolly-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/j/o/jolly-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.kawaii-adopty.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/k/a/kawaii-adopty.gif?11"/></a</li>
+		<li><a target="_blank" href="http://www.kawaii-mafia-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/k/a/kawaii-mafia-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.kawaiiadoptablegroup.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/k/a/kawaiiadoptablegroup.png?9"/></a</li>
+		<li><a target="_blank" href="http://www.kemonomimi-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/k/e/kemonomimi-adopts.jpg?6"/></a</li>
+		<li><a target="_blank" href="http://www.kirikitties.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/k/i/kirikitties.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.kitsunetsukiadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/k/i/kitsunetsukiadopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.koala-tea-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/k/o/koala-tea-adoptables.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.koimes.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/k/o/koimes.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.ksyder-closedspecies.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/k/s/ksyder-closedspecies.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.lais-orphanage.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/a/lais-orphanage.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.lampdragoncave.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/l/a/lampdragoncave.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.lavaes-world.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/l/a/lavaes-world.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.leafy-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/e/leafy-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.leemaspecies.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/l/e/leemaspecies.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.legit-breedables.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/l/e/legit-breedables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.leibe-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/e/leibe-adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.lets-adopt-something.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/e/lets-adopt-something.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.lily-pad-adoption.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/i/lily-pad-adoption.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.lion-adopters.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/l/i/lion-adopters.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.lnnovation.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/l/n/lnnovation.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.loulous-adopt-center.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/o/loulous-adopt-center.gif?14"/></a</li>
+		<li><a target="_blank" href="http://www.loveable-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/o/loveable-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.lovelyadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/o/lovelyadoptables.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.loving--adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/o/loving--adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.luna-fantasy-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/l/u/luna-fantasy-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.magical-tcmb.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/a/magical-tcmb.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.malukiri-den.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/a/malukiri-den.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.mantipurrfect.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/a/mantipurrfect.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.marvelous-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/m/a/marvelous-adoptables.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.masquelin-clutch.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/a/masquelin-clutch.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.mcadoptables.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/m/c/mcadoptables.png?15"/></a</li>
+		<li><a target="_blank" href="http://www.melodidogs.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/e/melodidogs.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.mission-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/m/i/mission-adopt.gif?10"/></a</li>
+		<li><a target="_blank" href="http://www.misty-kingdoms.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/i/misty-kingdoms.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.mlpadoptionismagic.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/m/l/mlpadoptionismagic.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.mlpadopts.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/m/l/mlpadopts.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.monster-bat-junction.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/m/o/monster-bat-junction.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.moonlight-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/m/o/moonlight-adopts.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.more-adoptables-now.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/m/o/more-adoptables-now.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.my-little-adoptables.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/m/y/my-little-adoptables.png?6"/></a</li>
+		<li><a target="_blank" href="http://www.mylittleadoptable.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/m/y/mylittleadoptable.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.mylittlepony-adopt.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/m/y/mylittlepony-adopt.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.mystery-adopts.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/m/y/mystery-adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.mysteryadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.mysteryadoptcentre.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/m/y/mysteryadoptcentre.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.nautical-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/n/a/nautical-adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.neo-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/n/e/neo-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.new-n-used-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/n/e/new-n-used-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.niftyshop.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/n/i/niftyshop.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.no-auction-adopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/n/o/no-auction-adopts.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.nyamrianworkshop.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/n/y/nyamrianworkshop.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.o-best-adoptables-o.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/o/_/o-best-adoptables-o.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.o-creature-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/o/_/o-creature-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.o0-adoptme-0o.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/o/0/o0-adoptme-0o.jpg?3"/></a</li>
+		<li><a target="_blank" href="http://www.oc-tailor.deviantart.com" class="misc"><img src="http://a.deviantart.net/avatars/o/c/oc-tailor.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.onestop-adoptshop.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/o/n/onestop-adoptshop.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.ooadoptablesoo.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/o/o/ooadoptablesoo.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.original-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/o/r/original-adopts.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.owletspecies.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/o/w/owletspecies.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.paum-paradise.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/p/a/paum-paradise.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.pawm-phanatics.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/p/a/pawm-phanatics.jpg?3"/></a</li>
+		<li><a target="_blank" href="http://www.paypal-adopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/a/paypal-adopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.paypaladoptioncenter.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/a/paypaladoptioncenter.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.pikumon.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/p/i/pikumon.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.platefighters.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/p/l/platefighters.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.point-adoptables.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/point-adoptables.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.point-adopties.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/point-adopties.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.point-adopts.deviantart.com" class="quality payment"><img src="http://a.deviantart.net/avatars/p/o/point-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.point-free-adopts.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/point-free-adopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.pointables.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/pointables.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.pointcritters.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/pointcritters.png?4"/></a</li>
+		<li><a target="_blank" href="http://www.pointlove.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/pointlove.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.points-adoptions.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/p/o/points-adoptions.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.points-and-cash.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/p/o/points-and-cash.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.points-for-adptable.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/o/points-for-adptable.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.polished-adopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.pon-e-qons.deviantart.com" class="fandom closed"><img src="http://a.deviantart.net/avatars/p/o/pon-e-qons.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.ponies-need-homes.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/p/o/ponies-need-homes.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.pony-adoptables.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/p/o/pony-adoptables.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.precious-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/p/r/precious-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.premium-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/p/r/premium-adoptables.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.prettycuteadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/p/r/prettycuteadopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.prittylittleponies.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/p/r/prittylittleponies.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.pro-adopt.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/p/r/pro-adopt.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.ptsforadopt.deviantart.com" class="payment"><img src="http://a.deviantart.net/avatars/p/t/ptsforadopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.pyrogi-adoptables.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/p/y/pyrogi-adoptables.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.quality-adoptables.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/q/u/quality-adoptables.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.quality-adopts.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/q/u/quality-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.quarrycreature.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/q/u/quarrycreature.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.rainbow-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/r/a/rainbow-adoptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.raindropcafe.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/r/a/raindropcafe.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.rensadoptablesgroup.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/r/e/rensadoptablesgroup.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.rumianekdogs.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/r/u/rumianekdogs.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sailor-u.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/a/sailor-u.png?9"/></a</li>
+		<li><a target="_blank" href="http://www.second-chancerescues.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.sell-your-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/e/sell-your-adopts.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.shardwing-species.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/h/shardwing-species.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.shinshiadoptables.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/s/h/shinshiadoptables.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.shoppableadoptable.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/h/shoppableadoptable.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.shtspecies.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/h/shtspecies.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.skellkninesanctuary.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/s/k/skellkninesanctuary.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sliclop.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/l/sliclop.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.sodaren-town.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/o/sodaren-town.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sonic--adopts.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonic--adopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.sonic-adoptionagency.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonic-adoptionagency.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.sonic-adopts.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonic-adopts.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.sonicadoopts.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonicadoopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sonicadoptables.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonicadoptables.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.sonicadoptablesfree.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonicadoptablesfree.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sonicadoptablesgroup.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/o/sonicadoptablesgroup.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.sonicadoptorphanage.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.space-elements.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/s/p/space-elements.png?5"/></a</li>
+		<li><a target="_blank" href="http://www.spacialdescendants.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/p/spacialdescendants.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.spam-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/p/spam-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.spellboundrealms.deviantart.com" class="quality"><img src="http://a.deviantart.net/avatars/s/p/spellboundrealms.png?10"/></a</li>
+		<li><a target="_blank" href="http://www.squibtank.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/s/q/squibtank.png?6"/></a</li>
+		<li><a target="_blank" href="http://www.star-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/t/star-adoptables.png?11"/></a</li>
+		<li><a target="_blank" href="http://www.starburstadoptables.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/s/t/starburstadoptables.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.storms-adopt-center.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/t/storms-adopt-center.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.sugar-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/u/sugar-adoptables.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.summers-garden.deviantart.com" class="agency"><img src="http://a.deviantart.net/avatars/s/u/summers-garden.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.super-adoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/u/super-adoptables.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.superadoptioncentre.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/u/superadoptioncentre.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.sweetie--adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/w/sweetie--adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.sweeties-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/s/w/sweeties-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.sweetponyadopt.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/s/w/sweetponyadopt.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.takeanadoptablehome.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/a/takeanadoptablehome.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.teacup-foxes.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/e/teacup-foxes.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.thatoneadoptgroup.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/h/thatoneadoptgroup.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.the-a-agency.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.the-adopt-factory.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/h/the-adopt-factory.png?2"/></a</li>
+		<li><a target="_blank" href="http://www.the-adoption-agency.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/h/the-adoption-agency.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.the-bagpack-cubby.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/h/the-bagpack-cubby.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.the-mais-pond.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/h/the-mais-pond.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.the-ninfu-species.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/default_group.gif"/></a</li>
+		<li><a target="_blank" href="http://www.the-sugarfactory.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/h/the-sugarfactory.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.the-wolf-pound.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/t/h/the-wolf-pound.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.theadoptablemarket.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/h/theadoptablemarket.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.theadoptionplace.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/h/theadoptionplace.gif?3"/></a</li>
+		<li><a target="_blank" href="http://www.torkana-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/t/o/torkana-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.treatpups.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/r/treatpups.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.tree-of-life-adopts.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/t/r/tree-of-life-adopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.ultimateadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/u/l/ultimateadopts.gif?7"/></a</li>
+		<li><a target="_blank" href="http://www.underlandadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/u/n/underlandadopts.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.unhuman-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/u/n/unhuman-adopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.unknown-adopt-makers.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/u/n/unknown-adopt-makers.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.vermil-upus.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/v/e/vermil-upus.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.viokatysseadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/v/i/viokatysseadopts.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.wanna-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/w/a/wanna-adopt.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.welcomedadoptables.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/w/e/welcomedadoptables.jpg?1"/></a</li>
+		<li><a target="_blank" href="http://www.wolf-a-meow-adopts.deviantart.com" class="species"><img src="http://a.deviantart.net/avatars/w/o/wolf-a-meow-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.world-of-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/w/o/world-of-adopts.gif?5"/></a</li>
+		<li><a target="_blank" href="http://www.worldofquuel.deviantart.com" class="agency closed"><img src="http://a.deviantart.net/avatars/w/o/worldofquuel.gif?2"/></a</li>
+		<li><a target="_blank" href="http://www.worldwideadopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/w/o/worldwideadopts.jpg?2"/></a</li>
+		<li><a target="_blank" href="http://www.worth-it-adoptables.deviantart.com" class="all-adopts-accepted quality"><img src="http://a.deviantart.net/avatars/w/o/worth-it-adoptables.gif?4"/></a</li>
+		<li><a target="_blank" href="http://www.woven-darkness-adopt.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/w/o/woven-darkness-adopt.png?3"/></a</li>
+		<li><a target="_blank" href="http://www.xxfan-adoptsxx.deviantart.com" class="fandom"><img src="http://a.deviantart.net/avatars/x/x/xxfan-adoptsxx.png?1"/></a</li>
+		<li><a target="_blank" href="http://www.zee-adopts.deviantart.com" class="all-adopts-accepted"><img src="http://a.deviantart.net/avatars/z/e/zee-adopts.gif?1"/></a</li>
+		<li><a target="_blank" href="http://www.zyrrix.deviantart.com" class="closed"><img src="http://a.deviantart.net/avatars/z/y/zyrrix.png?4"/></a</li>
+		<!-- END THE GROUP INFORMATION HERE -->
+
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TableTest</title>
+		<script src="tabletest.js"></script>
+		<style>
+            .alll, .all, .closed, .fandom, .species, .misc, .payment {
+				display: none;
+			}
+        </style>
+	</head>
+    <body>
+		<!-- PASTE THE GROUP INFORMATION HERE -->
+		<li><a href="http://www.1all-adopts1.deviantart.com"><img src="http://a.deviantart.net/avatars/1/a/1all-adopts1.gif?2" class="alll all"/></a></li>
+		<li><a href="http://www.4d0p74bl35.deviantart.com"><img src="http://a.deviantart.net/avatars/4/d/4d0p74bl35.png?1" class="alll all"/></a></li>
+		<li><a href="http://www.absolutely-adopt-us.deviantart.com"><img src="http://a.deviantart.net/avatars/a/b/absolutely-adopt-us.gif?2" class="alll all"/></a></li>
+		<li><a href="http://www.acerbeonis.deviantart.com"><img src="http://a.deviantart.net/avatars/a/c/acerbeonis.gif?2" class="alll closed"/></a></li>
+		<li><a href="http://www.admirableadoptables.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/admirableadoptables.png?2" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-a-blessing.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-blessing.gif?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-a-cutie.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-cutie.gif?3" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-a-fantroll.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-fantroll.png?2" class="alll fandom"/></a></li>
+		<li><a href="http://www.adopt-a-fursona.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-fursona.gif?5" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-a-oc.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-oc.gif?3" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-a-pearl.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-pearl.jpg?1" class="alll closed"/></a></li>
+		<li><a href="http://www.adopt-a-pony.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-a-pony.gif?3" class="alll fandom"/></a></li>
+		<li><a href="http://www.adopt-agency.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-agency.png?2" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-an-adoptable.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-an-adoptable.jpg?12" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-an-oc-here.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-an-oc-here.png?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-awesomely.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-awesomely.png?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-bases.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-bases.png?1" class="alll misc"/></a></li>
+		<li><a href="http://www.adopt-canines.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-canines.png?6" class="alll species"/></a></li>
+		<li><a href="http://www.adopt-human.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-human.png?5" class="alll species"/></a></li>
+		<li><a href="http://www.adopt-me-a-furrie.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-me-a-furrie.png?2" class="alll species"/></a></li>
+		<li><a href="http://www.adopt-me-plz.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-me-plz.jpg?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-oasis.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-oasis.gif?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-plaza.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-plaza.gif?1" class="alll all"/></a></li>
+		<li><a href="http://www.adopt-sugar.deviantart.com"><img src="http://a.deviantart.net/avatars/a/d/adopt-sugar.gif?1" class="alll all"/></a></li>
+
+		<!-- END THE GROUP INFORMATION HERE -->
+		
+		<br/>
+		<br/>Filter:
+		<br/>
+		<select class="filter">
+			<option>empty</option>
+			<option value="alll" data-class="alll">[Show All]</option>
+			<option value="all" data-class="all">All</option>
+			<option value="closed" data-class="closed">Closed</option>
+			<option value="fandom" data-class="fandom">Fandom</option>
+			<option value="species" data-class="species">Species</option>
+			<option value="misc" data-class="misc">Miscellaneous</option>
+			<option value="payment" data-class="payment">Payment</option>
+		</select>
+		<script type="text/javascript">
+			var $img = $('.alll, .all, .closed, .fandom, .species, .misc, .payment');
+			$('.filter').change(function() {
+				$img.hide().filter('.' + $('option:selected', this).data('class')).show();
+			});
+
+		</script>
+    </body>
+</html>
